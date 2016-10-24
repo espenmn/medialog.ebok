@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="medialog.ebok"
+      interface="medialog.ebok.interfaces.IMedialogEbokLayer"
+      />
+</layers>

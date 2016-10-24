@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="medialog.ebok">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="medialog.ebok"
+      directory="static"
+      />
+      
+  <browser:page
+        name="ebook_view"
+        for="plone.dexterity.interfaces.IDexterityContainer"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        template="ebook.pt"
+        permission="zope2.View"
+    />
+
+  <browser:page
+        name="chapter_view"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        template="chapter.pt"
+        permission="zope2.View"
+    />
+
+</configure>

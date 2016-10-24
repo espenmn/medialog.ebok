@@ -1,0 +1,49 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="medialog.ebok">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+
+  <include package=".browser" />
+
+
+  <genericsetup:registerProfile
+      name="default"
+      title="medialog.ebok"
+      directory="profiles/default"
+      description="Installs the medialog.ebok add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="medialog.ebok-postInstall"
+      title="medialog.ebok post_install import step"
+      description="Post install import step from medialog.ebok"
+      handler=".setuphandlers.post_install">
+  </genericsetup:importStep>
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="medialog.ebok"
+      directory="profiles/uninstall"
+      description="Uninstalls the medialog.ebok add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="medialog.ebok-uninstall"
+      title="medialog.ebok uninstall import step"
+      description="Import step run during ininstalling medialog.ebok"
+      handler=".setuphandlers.uninstall">
+  </genericsetup:importStep>
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="medialog.ebok-hiddenprofiles" />
+
+</configure>

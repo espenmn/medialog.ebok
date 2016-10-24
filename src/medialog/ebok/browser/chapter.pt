@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+ 
+<metal:head fill-slot="javascript_head_slot">
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"], ['[latex]','[/latex]']  ],
+      		   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      			processEscapes: true}
+	});
+	</script>
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+</metal:head>
+
+<metal:content-core fill-slot="content-core"
+          tal:define="templateId template/getId">
+                      
+            <div id="oppgave-text"
+              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
+             tal:condition="context/text"
+             tal:content="structure context/text/output" />
+
+</metal:content-core>
+
+</body>
+</html>
+

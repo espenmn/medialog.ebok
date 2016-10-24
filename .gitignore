@@ -1,0 +1,7 @@
+
+*.pyc
+
+src/medialog.ebok.egg-info/
+
+
+src/medialog.ebok.egg-info/*
