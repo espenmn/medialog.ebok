@@ -22,19 +22,17 @@
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
-          
- 
             <div id="book"
-              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
-              tal:repeat="item context/getFolderContents">
+              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
+              <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
              		<h2 tal:content="item/Title" />
              		<div tal:content="structure obj/text/output" />
              	</div>
-            </div>
-
-</metal:content-core>
+              </tal:kapitler">  
+           </div>
+/metal:content-core>
 
 </body>
 </html>
