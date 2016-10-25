@@ -21,13 +21,12 @@
 </metal:head>
 
 <metal:content-core fill-slot="content-core"
-          tal:define="templateId template/getId;
-          chapters context/getFolderContents">
+          tal:define="templateId template/getId;">
           
  
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
-              tal:repeat="item chapters">
+              tal:repeat="item context/getFolderContent">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'">
              		<div tal:content="structure item/text/output" />
              	</div>
