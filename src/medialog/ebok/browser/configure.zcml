@@ -5,17 +5,17 @@
     i18n_domain="medialog.ebok">
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
+  <!--include package="z3c.jbot" file="meta.zcml" /-->
+  <!--browser:jbot
       directory="overrides"
       layer="medialog.ebok.interfaces.IMedialogEbokLayer"
-      />
+      /-->
 
   <!-- Publish static files -->
-  <browser:resourceDirectory
+  <!--browser:resourceDirectory
       name="medialog.ebok"
       directory="static"
-      />
+      /-->
       
   <browser:page
         name="ebook_view"
