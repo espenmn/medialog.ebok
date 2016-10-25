@@ -27,9 +27,10 @@
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
               tal:repeat="item context/getFolderContents">
-             	<div class="chapter" tal:condition="python: item.Type=='Kapittel'">
+             	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
+             		tal:define="obj item/getObject">
              		<h2 tal:content="item/Title" />
-             		<div tal:content="structure item/getObject/text/output" />
+             		<div tal:content="structure obj/text/output" />
              	</div>
             </div>
 
