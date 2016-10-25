@@ -24,8 +24,7 @@
              tal:define="uuid context/@@uuid | nothing">
   <metal:listing use-macro="context/@@listing_view/macros/content-core">
     <!-- we don't want the dl -->
-    <div id="book"
-              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
+
     <metal:entries fill-slot="entries">
       <metal:block use-macro="context/@@listing_view/macros/entries">
         <metal:entry fill-slot="entry" tal:condition="python: item.UID != uuid">
@@ -33,7 +32,7 @@
         </metal:entry>
       </metal:block>
     </metal:entries>
-    </div>
+
   </metal:listing>
 </metal:block>
 </metal:content-core>
