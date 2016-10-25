@@ -28,8 +28,9 @@
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
               tal:repeat="item chapters">
-             	<div class="chapter" tal:condition="python: item/Type=='Kapittel'"
-             		tal:content="structure item/text/output" />
+             	<div class="chapter" tal:condition="python: item/Type=='Kapittel'">
+             		<div tal:content="structure item/text/output" />
+             	</div>
             </div>
 
 </metal:content-core>
