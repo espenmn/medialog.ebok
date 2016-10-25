@@ -1,6 +1,6 @@
-
-            <div id="chapter"
-              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
-             tal:condition="context/text"
-             tal:content="structure context/text/output" />
+<h2 tal:content="item/Title" />
+<div id="chapter"
+     class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
+     tal:condition="context/text"
+     tal:content="structure context/text/output" />
 

@@ -28,8 +28,6 @@
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
-             		<h2 tal:content="item/Title" />
-             		<div tal:content="structure obj/text/output" />
              	</div>
               </tal:kapitler>  
            </div>
