@@ -22,12 +22,12 @@
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;
-          chapters context/items"
-          class="pat-autotoc"
-          data-pat-autotoc="scrollDuration:slow;
-          levels:h1,h2,h3,h4,h5,h6;">
-                      
-            <div id="oppgave-text" tal:repeat="item chapters">
+          chapters context/items">
+          
+ 
+            <div id="book"
+              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
+              tal:repeat="item chapters">
              	<div class="chapter" tal:condition="item/text"
              		tal:content="structure item/text/output" />
             </div>
