@@ -28,6 +28,7 @@
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
               tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'">
+             		<h2 tal:content="context/Title" />
              		div tal:content="structure item/text/output" />
              	</div>
             </div>
