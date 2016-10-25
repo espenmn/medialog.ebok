@@ -33,4 +33,12 @@
         permission="zope2.View"
     />
 
+  <browser:page
+        name="ebook_chapter"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        template="ebook_chapter.pt"
+        permission="zope2.View"
+    />
+
 </configure>
