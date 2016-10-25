@@ -32,7 +32,7 @@
              	</div>
               </tal:kapitler>  
            </div>
-/metal:content-core>
+</metal:content-core>
 
 </body>
 </html>
