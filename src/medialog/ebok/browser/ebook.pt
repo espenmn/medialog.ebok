@@ -1,12 +1,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
-      metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="plone">
 <body>
- 
 <metal:head fill-slot="javascript_head_slot">
 	<script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
@@ -20,19 +19,24 @@
 	</script>
 </metal:head>
 
-<metal:content-core fill-slot="content-core"
-          tal:define="templateId template/getId;">
-            <div id="book"
+<metal:content-core fill-slot="content-core">
+<metal:block define-macro="content-core"
+             tal:define="uuid context/@@uuid | nothing">
+  <metal:listing use-macro="context/@@listing_view/macros/content-core">
+    <!-- we don't want the dl -->
+    <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
-              <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
-             		tal:define="obj item/getObject">
-             		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
-             	</div>
-              </tal:kapitler>  
-           </div>
+    <metal:entries fill-slot="entries">
+      <metal:block use-macro="context/@@listing_view/macros/entries">
+        <metal:entry fill-slot="entry" tal:condition="python: item.UID != uuid">
+          <div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter| nothing" />
+        </metal:entry>
+      </metal:block>
+    </metal:entries>
+    </div>
+  </metal:listing>
+</metal:block>
 </metal:content-core>
 
 </body>
 </html>
-
