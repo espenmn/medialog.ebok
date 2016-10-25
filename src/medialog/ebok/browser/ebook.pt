@@ -30,7 +30,7 @@
              		<h2 tal:content="item/Title" />
              		<div tal:content="structure obj/text/output" />
              	</div>
-              </tal:kapitler">  
+              </tal:kapitler>  
            </div>
 /metal:content-core>
 
