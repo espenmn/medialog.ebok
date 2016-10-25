@@ -29,7 +29,7 @@
               tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'">
              		<h2 tal:content="item/Title" />
-             		<div tal:content="structure item/text/output" />
+             		<div tal:content="structure item/getObject/text/output" />
              	</div>
             </div>
 
