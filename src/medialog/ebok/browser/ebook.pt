@@ -18,10 +18,12 @@
 	<script type="text/javascript" async
 	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 	</script>
+	
 </metal:head>
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
+            <link rel="stylesheet" href="style.css"/>
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
               <tal:kapitler tal:repeat="item context/getFolderContents">
