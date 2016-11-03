@@ -47,7 +47,6 @@ setup(
         'setuptools',
         'z3c.jbot',
         'plone.app.dexterity',
-        'collective.z3cform.colorpicker',
     ],
     extras_require={
         'test': [
