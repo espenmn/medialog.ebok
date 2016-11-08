@@ -41,14 +41,14 @@
         <div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
             <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-            Last ned Ebok
+             <img src="../ebook_icon.jpg/@@images/mini"  Last ned Ebok
             </a>
         </div>    
         
         <div class="pdfFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
             <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
-            Last ned boken som PDF
+            <img src="http://ebok.medialog.no/pdf-flat.dms/@@images/mini" /> Last ned boken som PDF
             </a>
         </div>    
                     
