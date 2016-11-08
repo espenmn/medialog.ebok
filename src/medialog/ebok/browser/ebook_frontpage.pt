@@ -17,7 +17,7 @@
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;
-          leadsize context/leadsize|nothing;
+          leadsize 'preview';
           scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale=leadsize)">
     <div id="book_frontpage">
             
