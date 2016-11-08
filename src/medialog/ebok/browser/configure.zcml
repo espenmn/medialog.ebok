@@ -26,6 +26,14 @@
     />
 
   <browser:page
+        name="ebook_front"
+        for="plone.dexterity.interfaces.IDexterityContainer"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        template="ebook_frontpage.pt"
+        permission="zope2.View"
+    />
+
+  <browser:page
         name="chapter_view"
         for="plone.dexterity.interfaces.IDexterityContent"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
