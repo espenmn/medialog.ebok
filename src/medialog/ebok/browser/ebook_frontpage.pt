@@ -17,13 +17,12 @@
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;
-          leadsize 'preview';
-          scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale=leadsize)">
+          scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='preview')">
     <div id="book_frontpage">
             
         <figure class="bookImageContainer" 
-        	tal:attributes="class python:'newsImageContainer image-' + str(leadsize)" 
-             tal:condition="python: scaled_image  and leadsize != 'none'" >
+        	tal:attributes="class python:'newsImageContainer image-' + 'preview'" 
+             tal:condition="python: scaled_image">
             <a href="#"
                tal:define="here_url context/@@plone_context_state/object_url;
                            large_image python: scale_func.scale('image', scale='large');"
