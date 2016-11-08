@@ -15,7 +15,7 @@
         <div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
             <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-             <img src="../ebook_icon.jpg/@@images/image/thumb" />Last ned Ebok
+             <img src="../ebook_icon.jpg/@@images/image/icon" />Last ned Ebok
             </a>
         </div>    
         
