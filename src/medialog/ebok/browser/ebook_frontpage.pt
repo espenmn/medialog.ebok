@@ -9,19 +9,23 @@
    <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId">
     <div id="book_frontpage">
-            
+        <img tal:condition="exists:item_has_leadimage"
+                          tal:define="scale context/@@images; img python:scale.scale('leadImage', width=100, height=100)"
+                          tal:replace="structure python: img.tag() if img else None" />
+                          
+        <img src="/@@images/image/mini" />
 
         <div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
             <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-             <img src="../ebook_icon.jpg/@@images/image/mini">Last ned Ebok
+             <img src="../ebook_icon.jpg/@@images/image/mini" />Last ned Ebok
             </a>
         </div>    
         
         <div class="pdfFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
             <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
-            <img src="http://ebok.medialog.no/pdf-flat.dms/@@images/image/mini" /> Last ned boken som PDF
+            <img src="../pdf-flat.dms/@@images/image/mini" /> Last ned boken som PDF
             </a>
         </div>    
                     
