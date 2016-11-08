@@ -10,19 +10,19 @@
           tal:define="templateId template/getId">
     <div id="book_frontpage">
 
-        <img tal:attributes="src python:'%s/@@images/image/mini' % context.absolute_url()">
+        <img tal:attributes="src python:'%s/@@images/image/preview' % context.absolute_url()">
 
         <div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
             <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-             <img src="../ebook_icon.jpg/@@images/image/mini" />Last ned Ebok
+             <img src="../ebook_icon.jpg/@@images/image/thumb" />Last ned Ebok
             </a>
         </div>    
         
         <div class="pdfFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
             <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
-            <img src="../pdf-flat.dms/@@images/image/mini" /> Last ned boken som PDF
+            <img src="../pdf-flat.dms/@@images/image/icon" /> Last ned boken som PDF
             </a>
         </div>    
                     
