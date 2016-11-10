@@ -24,6 +24,10 @@
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
             <link rel="stylesheet" href="style.css"/>
+            <a href="#" class="pat-contentloader" data-pat-contentloader="content:.autotoc-nav;target:#contenttarget;">
+            Innholdsfortegnelse</a>
+   			<div id="contenttarget"> </div>
+
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
               <tal:kapitler tal:repeat="item context/getFolderContents">
