@@ -22,7 +22,7 @@
         <div class="pdfFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
             <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
-            <img src="../pdf-flat.dms/@@images/image/tile" /> Last ned boken som PDF
+            <img src="../pdf-flat.dms/@@images/image/tile" /> Last ned PDF
             </a>
         </div>    
                     
