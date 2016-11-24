@@ -12,5 +12,10 @@
         for="plone.dexterity.interfaces.IDexterityContent"
         />
 
-   
+  <include package="pp.client.plone" />
+
+    <class class="medialog.ebok.behavior.IBokBehavior">
+        <implements interface="pp.client.plone.interfaces.IPPContent" />
+    </class>
+    
 </configure>

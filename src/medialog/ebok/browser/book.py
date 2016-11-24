@@ -8,12 +8,7 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class BookView(BrowserView):
-    """ This is the most generic Dexertiy view that will be used
-        for Dexterity-based content-types created throught-the-web
-        which have no specific interfaces. Dexterity types
-        defined through code usually have a specific interface
-        and can be defined through the standard way as for other
-        AT-based content-types.
+    """ Converter view for Bok.
     """
 
     template = ViewPageTemplateFile('book.pt')

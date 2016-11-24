@@ -46,6 +46,8 @@ setup(
         'plone.api',
         'setuptools',
         'z3c.jbot',
+        'medialog.leadimagesize',
+        'collective.mathjax',
         'plone.app.dexterity',
     ],
     extras_require={

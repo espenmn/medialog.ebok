@@ -53,7 +53,6 @@
     <!--pp client templates -->
     <browser:page
       name="asHTML"
-      layer="medialog.ebok.interfaces.IMedialogEbokLayer"            
       for="medialog.ebok.behavior.IBokBehavior"
       permission="zope2.View"
       class=".book.BookView"

@@ -53,7 +53,7 @@
        
     
   <pp:resourceDirectory
-          name="ebok_resource"
+          name="resources_ebok"
           directory="resources_ebok"
    />
 

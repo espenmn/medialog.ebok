@@ -1,5 +1,12 @@
-<!-- HTML fragment for Dexterity documents -->
-<div class="type-dexterity-document content-body">
-    <h1>This will be the book view</h1>
-    <span class="label">Portal type:</span> <span tal:content="context/portal_type" />
+ <div id="book">
+         <link rel="stylesheet" href="/@@download/style" />
+   <tal:kapitler tal:repeat="item context/getFolderContents">
+             	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
+             		tal:define="obj item/getObject">
+             		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
+             	</div>
+   </tal:kapitler>  
 </div>
+
+
+ 

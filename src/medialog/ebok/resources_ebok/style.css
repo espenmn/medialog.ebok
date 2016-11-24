@@ -1,0 +1,170 @@
+#book,
+#main-content {
+padding-top: 15px;
+}
+
+body {
+	 padding:  50px;
+    text-align: left;
+    background: white;
+    font-size: 50%;
+}
+
+h1, h2, h3 {
+    display: block;
+    page-break-after: avoid;
+    page-break-before: always;
+    position: relative;
+}
+p {
+    font-size: 8pt;
+    font-weight: 300;
+}
+.box {
+    border: 1px solid silver;
+    margin-bottom: 1em;
+    padding: 1em;
+    page-break-inside: avoid;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    page-break-inside: avoid;
+    width: 100%;
+}
+tr, td {
+    margin: 0;
+    padding: 0;
+}
+td {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 4px 8px;
+}
+p {
+    margin: 0;
+}
+code {
+    font-family: monospace;
+}
+h1 {
+    color: #123456;
+    text-align: left;
+}
+h2 {
+    color: #0b5690;
+    font-size: 2em;
+    text-align: left;
+    text-transform: uppercase;
+}
+h3 {
+    border-bottom: 1px solid #0b5690;
+    color: #0b5690;
+    font-size: 1.7em;
+    padding-bottom: 4px;
+    text-align: left;
+}
+h4 {
+    border-bottom: 1px solid #0b5690;
+    font-size: 1.5em;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    text-align: left;
+}
+h5 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+    text-align: left;
+}
+h6 {
+    font-size: 1.1em;
+    margin: 1.5em 0 0.5em;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+img.left {
+    float: left;
+    margin: 1em 2em 1em 0;
+}
+.comment {
+    color: #555;
+    padding-left: 1em;
+}
+.clear {
+    clear: both;
+}
+
+#book_frontpage a {
+	font-size: 160%;
+	border:  1px solid silver;
+	width: 100%;
+	max-width: 316px;
+	height: 100%;
+	padding: 0.5em 1em;
+	margin: 1em 0;
+	display: block;
+	border-radius: 10px;
+
+}
+
+#book_frontpage  img {
+	margin-right: 0.5em;
+}
+
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
