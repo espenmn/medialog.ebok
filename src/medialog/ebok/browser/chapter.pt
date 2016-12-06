@@ -8,7 +8,6 @@
 <body>
  
 <metal:head fill-slot="javascript_head_slot">
-	 <link rel="stylesheet"  href="../style.css" />
 </metal:head>
 
 <metal:content-core fill-slot="content-core"

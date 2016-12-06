@@ -14,6 +14,7 @@ class BookView(BrowserView):
     template = ViewPageTemplateFile('book.pt')
 
     def __call__(self, *args, **kw):
+        import pdb; pdb.set_trace()
         return self.template(self.context)
 
 InitializeClass(BookView)

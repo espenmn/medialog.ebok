@@ -38,7 +38,6 @@
               </tal:kapitler>  
            </div>
 
-	<link rel="stylesheet"  href="style.css" />
 </metal:content-core>
 
 </body>
