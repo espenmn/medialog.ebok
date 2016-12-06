@@ -1,5 +1,4 @@
  <div id="book">
-         <link rel="stylesheet" href="/@@download/style" />
    <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
