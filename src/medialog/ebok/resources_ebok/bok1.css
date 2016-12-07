@@ -5,8 +5,10 @@ mport url("fonts.css");
     -moz-box-sizing: border-box;
 }
  
-
+ 
 @page{
+	margin-top: 5cm;
+    margin-bottom: 5cm;
   size: A4;
   orphans:4; 
   widows:2;
@@ -14,8 +16,10 @@ mport url("fonts.css");
   padding-top: 10mm !important;
 }
 
+
 html, body {
   padding:  6mm;
+  margin:  10mm;
   orphans:4; 
   widows:2;
   font-size: 8pt;
