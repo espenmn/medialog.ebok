@@ -9,10 +9,9 @@ mport url("fonts.css");
 @page,
 page {
   size: A4;
-  margin: 30mm;
-  padding:  10mm;
   orphans:4; 
   widows:2;
+  background: red;
 }
 
 html, body {
