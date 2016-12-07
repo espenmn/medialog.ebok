@@ -9,61 +9,28 @@ import url("fonts.css");
   size: A4;
   orphans:4; 
   widows:2;
-  margin: 150;
-  padding: 150;
-  margin-top: 200 !important;
   mso-header-margin:5in; 
-mso-footer-margin:5in; 
-border: 2cm solid red;
+   mso-footer-margin:5in; 
 }
 
  
  
-page{
-  size: A4;
-  orphans:4; 
-  widows:2;
-  margin: 150;
-  padding: 150;
-  
-    
-}
-
-page,
-.page {
-    width: 21cm;
-    min-height: 29.7cm;
-    padding: 2cm;
-    margin: 1cm auto;
-    border: 1px #D3D3D3 solid;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
 
 @media print {
     @page {
        margin: 3cm;
-       border: 10mm;
     }
  }
 
 
-page[size="A4"] {
-  background: white;
-  width: 21cm;
-  height: 29.7cm;
-  display: block;
-  margin: 3cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-}
 
 html, body {
   orphans:4; 
+  margin-left: 15mm;
+  margin-right: 15mm;
   widows:2;
   font-size: 8pt;
-  border:  10px solid black;
+  line-height: 150%;
 }
 
  
