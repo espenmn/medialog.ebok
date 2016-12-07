@@ -18,8 +18,8 @@ import url("fonts.css");
 
 
 html, body {
-  xpadding:  6mm;
-  xmargin:  10mm;
+  padding:  6mm !important;
+  margin:  10mm !important;
   orphans:4; 
   widows:2;
   font-size: 8pt;
