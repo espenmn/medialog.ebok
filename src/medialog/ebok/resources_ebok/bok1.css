@@ -5,13 +5,24 @@ import url("fonts.css");
     -moz-box-sizing: border-box;
 }
  
+@page {
+  size: A4;
+  orphans:4; 
+  widows:2;
+  margin: 50mm !important;
+  padding: 50mm !important;
+}
+
+ 
  
 page{
   size: A4;
   orphans:4; 
   widows:2;
-  margin: 20mm !important;
+  margin: 50mm !important;
+  padding: 50mm !important;
 }
+
 
 
 html, body {
