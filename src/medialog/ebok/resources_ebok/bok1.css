@@ -15,8 +15,8 @@ page {
 }
 
 html, body {
-   margin: 30mm;
-  padding:  10mm;
+   margin: 3mm;
+  padding:  2mm;
   orphans:4; 
   widows:2;
   font-size: 11pt;
@@ -67,4 +67,8 @@ table, figure {
 
 p {
 	margin-bottom: 2mm;
+}
+
+img {
+  max-width: 100%;
 }
