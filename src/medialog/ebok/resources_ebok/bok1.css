@@ -9,9 +9,11 @@ mport url("fonts.css");
 @page,
 page {
   size: A4;
-  margin: 0;
+  margin: 30mm;
+  padding:  10mm;
   orphans:4; 
   widows:2;
+  font-size: 11pt;
 }
 
 
@@ -30,10 +32,7 @@ page {
 
 
 html, body {
-    width: 210mm;
-    height: 297mm;
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    margin: 5mm 5mm 5mm 5mm;  
 } 
 
 .page-break
