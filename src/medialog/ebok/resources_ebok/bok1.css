@@ -11,15 +11,16 @@ page {
   size: A4;
   orphans:4; 
   widows:2;
-  background: red;
+
 }
 
 html, body {
-   margin: 3mm;
-  padding:  2mm;
+   margin: 6mm;
+  padding:  6mm;
   orphans:4; 
   widows:2;
-  font-size: 11pt;
+  font-size: 8pt;
+    background: red;
 }
 
  
@@ -48,17 +49,33 @@ html, body {
 
 h1 {
 	  page-break-before: always;
+	  font-size: 20pt;
+}
+
+  
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+	color: #0088b4;
 }
 
 h2 {
-	color:  #DDD;
 	page-break-before: always;
+	  font-size: 17pt;
+}
+
+h3 {
+	  font-size: 14pt;
+}
+h4 {
+	  font-size: 12pt;
+}
+
+h5, h6 {
+	color: #c3222a;
+	 font-size: 12pt;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-  page-break-after: avoid;
-}
 
 table, figure {
   page-break-inside: avoid;
