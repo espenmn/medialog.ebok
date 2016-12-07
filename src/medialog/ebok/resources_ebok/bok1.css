@@ -6,7 +6,7 @@ import url("fonts.css");
 }
  
 @page {
-  size: A4;
+  size: A5;
   orphans:4; 
   widows:2;
   margin: 150;
@@ -16,7 +16,7 @@ import url("fonts.css");
  
  
 page{
-  size: A4;
+  size: A3;
   orphans:4; 
   widows:2;
   margin: 150;
