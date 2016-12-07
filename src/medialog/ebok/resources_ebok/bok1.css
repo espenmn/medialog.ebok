@@ -27,10 +27,17 @@ html, body {
 
 h1 {
 	color: blue;
+	  page-break-before: always;
 }
 
 h2 {
-	color:  red;
+	color:  blue;
+	page-break-before: always;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
 }
 
 
