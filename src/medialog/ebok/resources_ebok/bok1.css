@@ -10,6 +10,11 @@ mport url("fonts.css");
 page {
   size: A4;
   margin: 0;
+  @bottom-right {
+    content: counter(page);
+  }
+}
+
 }
 
 html, body {
