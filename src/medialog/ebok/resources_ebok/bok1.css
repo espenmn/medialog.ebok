@@ -21,7 +21,7 @@ import url("fonts.css");
     -webkit-padding-after: 2cm;
     -webkit-padding-start: 2cm;
      box-sizing: content-box;
-       zoom: 0.68; /*workaround for phantomJS2 rendering pages too large*/
+    
 }
 
  
@@ -37,6 +37,7 @@ import url("fonts.css");
 html {
   margin-left: 15mm;
   margin-right: 15mm;
+     zoom: 0.68; /*workaround for phantomJS2 rendering pages too large*/
 
 }
 
