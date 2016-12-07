@@ -1,18 +1,22 @@
 mport url("fonts.css");
 
-@page  
-{ 
-    size: auto;   /* auto is the initial value */ 
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+ 
 
-    /* this affects the margin in the printer settings */ 
-    margin: 25mm 25mm 25mm 25mm;  
-} 
+@page,
+page {
+  size: A4;
+  margin: 0;
+}
 
-body  
-{ 
-    /* this affects the margin on the content before sending to printer */ 
-    margin: 0px;  
+html, body {
+    width: 210mm;
+    height: 297mm;
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+    margin: 55mm 55mm 55mm 55mm;  
 } 
 
 .page-break
