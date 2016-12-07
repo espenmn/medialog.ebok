@@ -10,19 +10,11 @@ page{
   size: A4;
   orphans:4; 
   widows:2;
-  padding:  20mm;
-  padding-top: 50mm !important;
-  margin: 20mm;
-  margin-top: 25mm !important;
-  font-size: 50%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  margin: 20mm !important;
 }
 
 
 html, body {
-  padding:  6mm !important;
-  margin:  10mm !important;
   orphans:4; 
   widows:2;
   font-size: 8pt;
