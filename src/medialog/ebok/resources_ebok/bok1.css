@@ -6,21 +6,23 @@ import url("fonts.css");
 }
  
 @page {
-  size: A5;
+  size: A4;
   orphans:4; 
   widows:2;
   margin: 150;
   padding: 150;
+  margin-top: 200 !important;
 }
 
  
  
 page{
-  size: A3;
+  size: A4;
   orphans:4; 
   widows:2;
   margin: 150;
   padding: 150;
+    margin-top: 200 !important;
 }
 
 
