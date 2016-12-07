@@ -13,9 +13,15 @@ page {
   padding:  10mm;
   orphans:4; 
   widows:2;
-  font-size: 11pt;
 }
 
+html, body {
+   margin: 30mm;
+  padding:  10mm;
+  orphans:4; 
+  widows:2;
+  font-size: 11pt;
+}
 
  
 @page:right{
