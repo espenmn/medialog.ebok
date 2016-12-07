@@ -11,6 +11,14 @@ import url("fonts.css");
   widows:2;
   mso-header-margin:5in; 
    mso-footer-margin:5in; 
+       -webkit-margin-before: 2cm;
+    -webkit-margin-end: 2cm;
+    -webkit-margin-after: 2cm;
+    -webkit-margin-start: 2cm;
+    -webkit-padding-before: 2cm;
+    -webkit-padding-end: 2cm;
+    -webkit-padding-after: 2cm;
+    -webkit-padding-start: 2cm;
 }
 
  
