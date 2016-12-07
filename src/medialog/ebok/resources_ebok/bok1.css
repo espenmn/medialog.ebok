@@ -37,8 +37,6 @@ import url("fonts.css");
 html {
   margin-left: 15mm;
   margin-right: 15mm;
-     zoom: 0.68; /*workaround for phantomJS2 rendering pages too large*/
-
 }
 
 
