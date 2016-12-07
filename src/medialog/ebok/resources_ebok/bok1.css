@@ -14,7 +14,7 @@ import url("fonts.css");
   margin-top: 200 !important;
   mso-header-margin:5in; 
 mso-footer-margin:5in; 
-border: 2cm;
+border: 2cm solid red;
 }
 
  
@@ -55,8 +55,7 @@ page[size="A4"] {
   width: 21cm;
   height: 29.7cm;
   display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
+  margin: 3cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 
@@ -64,6 +63,7 @@ html, body {
   orphans:4; 
   widows:2;
   font-size: 8pt;
+  border:  10px solid black;
 }
 
  
