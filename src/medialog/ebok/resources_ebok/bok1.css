@@ -12,6 +12,9 @@ import url("fonts.css");
   margin: 150;
   padding: 150;
   margin-top: 200 !important;
+  mso-header-margin:.5in; 
+mso-footer-margin:.5in; 
+mso-paper-source:0;
 }
 
  
@@ -25,7 +28,35 @@ page{
     margin-top: 200 !important;
 }
 
+page,
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
 
+
+@media print and (width: 21cm) and (height: 29.7cm) {
+    @page {
+       margin: 3cm;
+    }
+ }
+
+
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
 
 html, body {
   orphans:4; 
