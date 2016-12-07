@@ -12,9 +12,9 @@ import url("fonts.css");
   margin: 150;
   padding: 150;
   margin-top: 200 !important;
-  mso-header-margin:.5in; 
-mso-footer-margin:.5in; 
-mso-paper-source:0;
+  mso-header-margin:5in; 
+mso-footer-margin:5in; 
+border: 2cm;
 }
 
  
@@ -25,7 +25,8 @@ page{
   widows:2;
   margin: 150;
   padding: 150;
-    margin-top: 200 !important;
+  
+    
 }
 
 page,
@@ -41,9 +42,10 @@ page,
 }
 
 
-@media print and (width: 21cm) and (height: 29.7cm) {
+@media print {
     @page {
        margin: 3cm;
+       border: 10mm;
     }
  }
 
