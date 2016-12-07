@@ -9,8 +9,8 @@ import url("fonts.css");
   size: A4;
   orphans:4; 
   widows:2;
-  margin: 50mm !important;
-  padding: 50mm !important;
+  margin: 150;
+  padding: 150;
 }
 
  
@@ -19,8 +19,8 @@ page{
   size: A4;
   orphans:4; 
   widows:2;
-  margin: 50mm !important;
-  padding: 50mm !important;
+  margin: 150;
+  padding: 150;
 }
 
 
