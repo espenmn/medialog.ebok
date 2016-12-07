@@ -16,7 +16,7 @@ html, body {
     width: 210mm;
     height: 297mm;
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    margin: 55mm 55mm 55mm 55mm;  
+    margin: 5mm 5mm 5mm 5mm;  
 } 
 
 .page-break
@@ -38,6 +38,10 @@ h2 {
 
 h1, h2, h3, h4, h5, h6 {
   page-break-after: avoid;
+}
+
+table, figure {
+  page-break-inside: avoid;
 }
 
 
