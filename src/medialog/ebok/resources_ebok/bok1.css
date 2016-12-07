@@ -9,6 +9,7 @@ import url("fonts.css");
   size: A4;
   orphans:4; 
   widows:2;
+  margin: 5cm;
   mso-header-margin:5in; 
    mso-footer-margin:5in; 
        -webkit-margin-before: 2cm;
@@ -19,6 +20,7 @@ import url("fonts.css");
     -webkit-padding-end: 2cm;
     -webkit-padding-after: 2cm;
     -webkit-padding-start: 2cm;
+     box-sizing: content-box;
 }
 
  
