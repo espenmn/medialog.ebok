@@ -7,23 +7,20 @@ import url("fonts.css");
  
  
 @page{
-	margin-top: 5cm;
-    margin-bottom: 5cm;
   size: A4;
   orphans:4; 
   widows:2;
   padding:  5mm;
-  padding-top: 10mm !important;
+  padding-top: 50mm !important;
 }
 
 
 html, body {
-  padding:  6mm;
-  margin:  10mm;
+  xpadding:  6mm;
+  xmargin:  10mm;
   orphans:4; 
   widows:2;
   font-size: 8pt;
-    background: red;
 }
 
  
