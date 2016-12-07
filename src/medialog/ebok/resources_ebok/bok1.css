@@ -10,8 +10,10 @@ import url("fonts.css");
   size: A4;
   orphans:4; 
   widows:2;
-  padding:  5mm;
+  padding:  20mm;
   padding-top: 50mm !important;
+  margin: 20mm;
+  margin-top: 25mm !important;
 }
 
 
