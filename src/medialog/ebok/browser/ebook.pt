@@ -23,7 +23,7 @@
  
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
-            <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css"/>
             <a href="#" class="pat-contentloader" data-pat-contentloader="content:.autotoc-nav;target:#contenttarget;">
             Innholdsfortegnelse</a>
    			<div id="contenttarget"> </div>
