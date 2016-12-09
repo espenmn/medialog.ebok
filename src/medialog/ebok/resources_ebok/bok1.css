@@ -170,13 +170,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-	  page-break-before: always;
 	  font-size: 24pt;
 }
 
-.chapter_frontpage h1 {
+div.chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 24pt;
+	  padding-top: 3em;
 }
 
 
