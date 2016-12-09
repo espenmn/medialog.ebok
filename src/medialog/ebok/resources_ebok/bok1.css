@@ -32,14 +32,15 @@ import url("fonts.css");
 html {
   margin-left: 15mm;
   margin-right: 15mm;
-}
+    font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+    font-size: 75%;
+    line-height: 150%;
+} 
 
 
-html, body {
+html, body, p {
   orphans:4; 
   widows:2;
-  font-size: 8pt;
-  line-height: 150%;
 }
 
 
@@ -132,10 +133,6 @@ div.admonition.eksempel {
 /* @end */
 
 
-html, body {
-    font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    font-size: 75%;
-} 
 
 .page-break
     {
