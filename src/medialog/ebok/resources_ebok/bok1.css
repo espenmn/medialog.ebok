@@ -139,8 +139,7 @@ div.admonition.eksempel {
     page-break-before:always;
     } 
 
-.chapter-break
-    {
+hr, .chapter-break {
     page-break-after:always;
    }     
 	
