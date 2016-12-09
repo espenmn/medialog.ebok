@@ -147,12 +147,17 @@ html, body {
     page-break-before:always;
     } 
     
+div.chapter {
+	padding-top: 3cm;
+	margin-top:  3cm;
+	 page-break-after:always;
+}
 
 .chapter_frontpage {
 	text-align: center;
 	vertical-align: middle;
 	background: #eeeef3;
-	padding: 15mm;
+	padding: 0 15mm 15mm;
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
     margin-top: 3cm;
