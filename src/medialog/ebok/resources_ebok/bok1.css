@@ -173,7 +173,8 @@ div.chapter_frontpage h1 {
 
 p.chapterDescription {
 	font-size: 15pp;
-	line-height: 20pt;
+	line-height: 18pt;
+	margin-bottom: 3cm;
 }
 
 h2 {
