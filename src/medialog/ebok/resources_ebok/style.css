@@ -1,174 +1,3 @@
-#book,
-#main-content {
-padding-top: 15px;
-}
-
-body {
-	 padding:  50px;
-    text-align: left;
-    background: white;
-    font-size: 50%;
-}
-
-h1, h2, h3 {
-    display: block;
-    page-break-after: avoid;
-    page-break-before: always;
-    position: relative;
-}
-p {
-    font-size: 8pt;
-    font-weight: 300;
-}
-.box {
-    border: 1px solid silver;
-    margin-bottom: 1em;
-    padding: 1em;
-    page-break-inside: avoid;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    page-break-inside: avoid;
-    width: 100%;
-}
-tr, td {
-    margin: 0;
-    padding: 0;
-}
-td {
-    border: 1px solid #ccc;
-    margin: 0;
-    padding: 4px 8px;
-}
-p {
-    margin: 0;
-}
-code {
-    font-family: monospace;
-}
-h1 {
-    color: #123456;
-    text-align: left;
-}
-h2 {
-    color: #0b5690;
-    font-size: 2em;
-    text-align: left;
-    text-transform: uppercase;
-}
-h3 {
-    border-bottom: 1px solid #0b5690;
-    color: #0b5690;
-    font-size: 1.7em;
-    padding-bottom: 4px;
-    text-align: left;
-}
-h4 {
-    border-bottom: 1px solid #0b5690;
-    font-size: 1.5em;
-    margin-bottom: 0;
-    padding-bottom: 4px;
-    text-align: left;
-}
-h5 {
-    font-size: 1.3em;
-    margin-bottom: 0;
-    text-align: left;
-}
-h6 {
-    font-size: 1.1em;
-    margin: 1.5em 0 0.5em;
-}
-img {
-    height: auto;
-    max-width: 100%;
-}
-img.left {
-    float: left;
-    margin: 1em 2em 1em 0;
-}
-.comment {
-    color: #555;
-    padding-left: 1em;
-}
-.clear {
-    clear: both;
-}
-
-#book_frontpage a {
-	font-size: 160%;
-	border:  1px solid silver;
-	width: 100%;
-	max-width: 316px;
-	height: 100%;
-	padding: 0.5em 1em;
-	margin: 1em 0;
-	display: block;
-	border-radius: 10px;
-
-}
-
-#book_frontpage  img {
-	margin-right: 0.5em;
-}
-
-
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background: transparent;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
-
 /* @override http://ebok.medialog.no/++plone++production/++unique++2016-12-06T15:21:55.061104/default.css */
 
 import url("fonts.css");
@@ -177,13 +6,25 @@ import url("fonts.css");
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
-
-@media print {
-    @page {
-       margin: 3cm;
-    }
- }
+ 
+@page {
+  size: A4;
+  orphans:4; 
+  widows:2;
+  margin: 5cm;
+  mso-header-margin:5in; 
+   mso-footer-margin:5in; 
+       -webkit-margin-before: 2cm;
+    -webkit-margin-end: 2cm;
+    -webkit-margin-after: 2cm;
+    -webkit-margin-start: 2cm;
+    -webkit-padding-before: 2cm;
+    -webkit-padding-end: 2cm;
+    -webkit-padding-after: 2cm;
+    -webkit-padding-start: 2cm;
+     box-sizing: content-box;
+    
+}
 
 
 html {
@@ -199,28 +40,9 @@ html, body {
   line-height: 150%;
 }
 
- 
-@page:right{
-  @bottom-right {
-    content: counter(page);
-    margin: 30pt 0 10pt 0;
-  }
-}
-
-@page:left{
-  @bottom-left {
-    content: counter(page);
-    margin: 30pt 0 10pt 0;
-  }
-}
 
 
-@page:right {
-  @top-right {
-    content: string(doctitle);
-    margin: 30pt 0 10pt 0;
- 
-  }/* @group markdown */
+/* @group markdown */
 
  p.admonition-title {
 	margin-left: -1.6em;
@@ -322,6 +144,7 @@ html, body {
     {
     page-break-before:always;
     } 
+    
 
 .chapter_frontpage {
 	width:  100%;
@@ -333,6 +156,8 @@ background: -webkit-radial-gradient(center, ellipse cover,  #000fff 0%,#2989d8 5
 background: radial-gradient(ellipse at center,  #000fff 0%,#2989d8 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 }
+  
+
   
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 1.6em;
@@ -348,10 +173,10 @@ h1 {
 	  font-size: 24pt;
 }
 
-
-h1.chapterDescription {
+.chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 24pt;
+	  color:  blue;;
 }
 
 
