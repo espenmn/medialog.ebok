@@ -164,7 +164,7 @@ div.admonition.eksempel {
 
 html, body {
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    font-size: 65%;
+    font-size: 75%;
 } 
 
 .page-break
@@ -175,7 +175,7 @@ html, body {
 
 h1 {
 	  page-break-before: always;
-	  font-size: 25pt;
+	  font-size: 19pt;
 }
 
   
@@ -188,20 +188,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	  font-size: 17pt;
+	  font-size: 13pt;
 	text-transform: none;
 }
 
 h3 {
-	  font-size: 14pt;
+	  font-size: 11pt;
 }
 h4 {
-	  font-size: 12pt;
+	  font-size: 9.5pt;
 }
 
 h5, h6 {
 	color: #c3222a;
-	 font-size: 12pt;
+	 font-size: 9,5pt;
 	 margin-bottom: 2px;
 }
 
