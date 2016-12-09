@@ -12,7 +12,6 @@
 
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId">
-                      
             <div id="chapter"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"
              tal:condition="context/text"
