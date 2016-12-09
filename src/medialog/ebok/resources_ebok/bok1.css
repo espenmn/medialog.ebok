@@ -1,5 +1,7 @@
 /* @override http://ebok.medialog.no/++plone++production/++unique++2016-12-06T15:21:55.061104/default.css */
 
+ /* @override http://ebok.medialog.no/++plone++production/++unique++2016-12-06T15:21:55.061104/default.css */
+
 import url("fonts.css");
 
 * {
@@ -148,17 +150,16 @@ html, body {
 
 .chapter_frontpage {
 	width:  100%;
-	height:  100%;
+	height:  297mm;
 	padding: 3cm 5cm;
 background: #000fff; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #000fff 0%, #2989d8 50%, #ffffff 100%); /* FF3.6-15 */
 background: -webkit-radial-gradient(center, ellipse cover,  #000fff 0%,#2989d8 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
 background: radial-gradient(ellipse at center,  #000fff 0%,#2989d8 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+  page-break-after:always;
 }
   
 
-  
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 1.6em;
     page-break-after: avoid;
@@ -176,7 +177,6 @@ h1 {
 .chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 24pt;
-	  color:  blue;;
 }
 
 
