@@ -142,26 +142,10 @@ html, body {
     page-break-before:always;
     } 
 
-.page-break
-    {
-    page-break-before:always;
-    } 
     
-div.chapter {
-	padding-top: 3cm;
-	margin-top:  3cm;
-}
 	
 .chapter_frontpage {
 	text-align: center;
-	vertical-align: middle;
-	background: #eeeef3;
-	padding: 0 15mm 35mm;
-	box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin-top: 3cm;
-    border:  1mm solid #006298;
-    border-radius: 4mm;
 }
   
 
@@ -182,9 +166,16 @@ h1 {
 div.chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 24pt;
-	  padding-top: 3em;
+	  line-height: 34pt;
+	  padding: 1cm;
+	  border-bottom:  1mm solid #006298;
+	  margin-bottom: 1cm;
 }
 
+p.chapterDescription {
+	font-size: 15pp;
+	line-height: 20pt;
+}
 
 h2 {
 	font-size: 13pt;
