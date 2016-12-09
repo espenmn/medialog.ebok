@@ -1,7 +1,7 @@
-<div class"chapter frontpage">
+<div class"chapter_frontpage">
     <h2 tal:content="context/Title" />
     <p class="documentDescription" tal:content="context/Description" />
-</di>
+</div>
 <div tal:condition="context/text"
      tal:content="structure context/text/output" />
 
