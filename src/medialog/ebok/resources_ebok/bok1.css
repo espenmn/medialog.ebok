@@ -139,7 +139,10 @@ div.admonition.eksempel {
     page-break-before:always;
     } 
 
-    
+.chapter-break
+    {
+    page-break-after:always;
+   }     
 	
 .chapter_frontpage {
 	text-align: center;

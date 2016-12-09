@@ -5,3 +5,5 @@
 <div tal:condition="context/text"
      tal:content="structure context/text/output" />
 
+<div class="chapter-break"> </div>
+
