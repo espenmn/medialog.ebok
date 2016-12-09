@@ -150,9 +150,8 @@ html, body {
 div.chapter {
 	padding-top: 3cm;
 	margin-top:  3cm;
-	 page-break-after:always;
 }
-
+	
 .chapter_frontpage {
 	text-align: center;
 	vertical-align: middle;
@@ -163,6 +162,7 @@ div.chapter {
     margin-top: 3cm;
     border:  1mm solid #006298;
     border-radius: 4mm;
+    margin-top:30cm;
 }
   
 
