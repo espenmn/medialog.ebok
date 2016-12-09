@@ -1,4 +1,4 @@
-<div class"chapter_frontpage">
+<div class="chapter_frontpage">
     <h2 tal:content="context/Title" />
     <p class="documentDescription" tal:content="context/Description" />
 </div>
