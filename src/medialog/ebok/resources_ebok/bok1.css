@@ -156,6 +156,8 @@ html, body {
 	vertical-align: middle;
 	background: #ccdde9;
 	padding-top: 7em;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
   
 
