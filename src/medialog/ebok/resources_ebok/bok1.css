@@ -149,15 +149,14 @@ html, body {
     
 
 .chapter_frontpage {
-	width:  100%;
-	height:  297mm;
-	page-break-after:always;
 	text-align: center;
 	vertical-align: middle;
-	background: #ccdde9;
-	padding-top: 7em;
+	background: #eeeef3;
+	padding: 15mm;
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
+    margin-top: 3cm;
+    border:  1mm solid #006298;
 }
   
 
