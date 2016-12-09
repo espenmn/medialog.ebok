@@ -1,3 +1,5 @@
+/* @override http://ebok.medialog.no/++plone++production/++unique++2016-12-06T15:21:55.061104/default.css */
+
 import url("fonts.css");
 
 * {
@@ -69,11 +71,95 @@ html, body {
     margin: 30pt 0 10pt 0;
  
   }
+
 }
 
+/* @group markdown */
 
+ p.admonition-title {
+	margin-left: -1.6em;
+	margin-top:  -1em;
+	background: white;
+	padding: 10pt 1em 0.5em;
+	margin-bottom: 15px;
+	float:  left;
+	color: #006298;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16pt;
+	text-transform: uppercase;
+	border-radius: 6px;
+}
+ div.admonition p  {
+    content: "";
+    clear: both;	
 
+}
 
+div.admonition {
+	page-break-inside:avoid;
+}
+
+div.admonition.viktig {
+	background-color: #f7c242;
+	padding: 1em 1.5em 0.5em;
+	margin: 1em 0;
+	border-radius: 6px;
+}
+
+div.admonition.viktig:before  {
+	content: "!";
+	margin-left: -2.4em;
+	margin-top: -0.4em;
+	font-size:  2.4em;;
+	background-color: #f7c242;
+	padding: 3px 10px;
+	display: none;
+	width: 1.3em;
+	float: left;
+	text-align: center;
+	border-radius: 6px;
+	top:  0;
+}
+
+ 
+    
+div.admonition.note {
+	background-color: #f7c242;
+	padding: 1.5em 1.5em 1em;
+	margin: 1em 0 2em;
+	border-radius: 6px;
+}
+
+div.admonition.merk:before ,
+div.admonition.oppgave:before  {
+	content: "!";
+	margin-left: -1.8em;
+	font-size:  2.4em;;
+	background-color: #f7c242;
+	line-height: 1.7em;
+	width: 1.4em;
+	float: left;
+	text-align: center;
+	border-radius: 6px;
+	top:  0;
+	color:  white;;
+}
+
+div.admonition.oppgave:before {
+	background-color: #c3222a;
+	content:  "?";
+	
+}
+
+div.admonition.eksempel {
+	background-color: #9ecee4;
+	padding: 1em 1.5em 0.5em;
+	margin: 2em 0 3em;
+	border-radius: 6px;
+}
+
+/* @end */
 
 
 html, body {
@@ -88,17 +174,21 @@ html, body {
 
 h1 {
 	  page-break-before: always;
-	  font-size: 20pt;
+	  font-size: 22pt;
 }
 
   
 h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.6em;
   page-break-after: avoid;
-	color: #0088b4;
+	color: #006298;
+	font-weight: normal;
+	font-style: normal;
 }
 
 h2 {
 	  font-size: 17pt;
+	text-transform: none;
 }
 
 h3 {
@@ -111,6 +201,7 @@ h4 {
 h5, h6 {
 	color: #c3222a;
 	 font-size: 12pt;
+	 margin-bottom: 2px;
 }
 
 
