@@ -134,7 +134,7 @@ div.admonition.note {
 div.admonition.merk:before ,
 div.admonition.oppgave:before  {
 	content: "!";
-	margin-left: -1.8em;
+	margin-left: -2em;
 	font-size:  2.4em;;
 	background-color: #f7c242;
 	line-height: 1.7em;
@@ -164,6 +164,7 @@ div.admonition.eksempel {
 
 html, body {
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+    font-size: 65%;
 } 
 
 .page-break
@@ -174,7 +175,7 @@ html, body {
 
 h1 {
 	  page-break-before: always;
-	  font-size: 22pt;
+	  font-size: 25pt;
 }
 
   
