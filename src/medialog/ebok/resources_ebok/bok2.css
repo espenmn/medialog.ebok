@@ -29,8 +29,8 @@ html {
   margin-left: 15mm;
   margin-right: 15mm;
   font-family:  "DejaVu Sans", "Times", "Times New Roman"  Georgia, serif;
-    font-size: 75%;
-    line-height: 150%;
+    font-size: 80%;
+    line-height: 130%;
 } 
 
 
@@ -134,8 +134,22 @@ div.admonition.aktivitet {
 	background-color: #d4aebb;	
 }
 
+div.admonition.maal {
+	border: 2px solid background: #319ea9;
+	padding: 4mm;
+	margin:  10mm 0;	
+	border-radius: 6pt;
 	
 }
+	
+div.admonition.maal p.admonition-title {
+	border-radius: 6pt 6pt 0 0 ;
+	display: block;
+	color:  white;
+	background: #319ea9;
+	padding: 5pt 4mm;
+;
+	}
 
 /* @end */
 
@@ -166,12 +180,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-	  font-size: 24pt;
+	  font-size: 250%;
 }
 
 div.chapter_frontpage h1 {
 	  page-break-before: never;
-	  font-size: 24pt;
+	  font-size: 250%;
 	  line-height: 34pt;
 	  padding: 1cm;
 	  border-bottom:  1mm solid #006298;
@@ -179,26 +193,27 @@ div.chapter_frontpage h1 {
 }
 
 p.chapterDescription {
-	font-size: 16pp;
+	font-size: 170%;
 	line-height: 18pt;
 	margin-bottom: 3cm;
 }
 
 h2 {
-	font-size: 13pt;
+	font-size: 200%;
 }
 
 h3 {
-	  font-size: 11pt;
+	  font-size: 175%;
 }
 h4 {
-	  font-size: 9.5pt;
+	  font-size: 150%;
 }
 
 h5, h6 {
-	color: #c64352;
-	 font-size: 9.5pt;
+	 xcolor: #c64352;
+	 font-size: 120%;
 	 margin-bottom: 2px;
+	font-weight: bold;
 }
 
 
@@ -209,7 +224,7 @@ table, figure {
 
 
 p {
-	margin-bottom: 2mm;
+	margin-bottom: 4pt;
 }
 
 img {
