@@ -61,7 +61,7 @@ div.admonition {
 	font-style: normal;
 	font-size: 150%;
 	text-transform: uppercase;
-	border-radius: 6px;
+	border-radius: 0 0 6px 0;
 }
  div.admonition p  {
     xcontent: "";
