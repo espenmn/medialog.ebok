@@ -27,34 +27,34 @@
         </div-->
         
         <div class="pdfFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf?resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 1 
             </a>
         </div>        
         <div class="pdfFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf?resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 2 
             </a>
         </div>     
         <div class="pdfFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs?resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 3 
             </a>
         </div>        
         <div class="pdfFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs?resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 4
             </a>
         </div>  
            
 
         <div class="epubFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=calibre?resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 1 
             </a>
         </div>        
         <div class="epubFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=calibre?resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
+            <a tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/image/tile" /> Generer Ebok 2 
             </a>
         </div>        
