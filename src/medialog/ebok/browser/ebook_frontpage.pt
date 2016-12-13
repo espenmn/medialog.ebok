@@ -55,7 +55,7 @@
         </div>        
         <div class="epubFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok2_template.pt' % context.absolute_url()">
-            <img src="./ebook_icon.jpg/image/tile" /> Generer Ebok 2 
+            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 2 
             </a>
         </div>        
 
