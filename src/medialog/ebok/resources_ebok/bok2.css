@@ -52,7 +52,7 @@ div.admonition {
 	background: #319ea9;
 	color: white;
 	padding: 10pt 1em 0.5em;
-	margin-top:  -0.6em;
+	margin-top:  -0.5em;
 	margin-left:  -1.2em;
 	margin-bottom: 15px;
 	float:  left;
@@ -63,7 +63,7 @@ div.admonition {
 	text-transform: uppercase;
 	border-radius: 6px;
 }
- div.admonition p  {
+ div.xaxxxxxxxxxadmonition p  {
     content: "";
     clear: both;	
 
