@@ -53,10 +53,10 @@ div.admonition {
 	color: white;
 	padding: 10pt 1em 0.5em;
 	margin-top:  -1em;
-	margin-left:  -1em;
+	margin-left:  -1.4em;
 	margin-bottom: 15px;
 	float:  left;
-	
+	page-break-after:avoid;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 150%;
