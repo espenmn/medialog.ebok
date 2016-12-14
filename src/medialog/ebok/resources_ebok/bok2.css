@@ -232,3 +232,30 @@ p {
 img {
   max-width: 100%;
 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    page-break-inside: avoid;
+    width: 100%;
+}
+#content table {
+	margin-bottom:15pt;
+	width: auto;
+}
+
+tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+#content td,
+#content th  {
+	padding: 7px 15px;
+}
+td {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 4px 8px;
+}
+
