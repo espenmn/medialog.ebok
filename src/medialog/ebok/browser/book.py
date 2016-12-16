@@ -1,8 +1,3 @@
-################################################################
-# pp.client-plone
-# (C) 2013,  ZOPYX Limited, D-72074 Tuebingen, Germany
-################################################################
-
 from pp.client.plone.browser.compatible import InitializeClass
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
