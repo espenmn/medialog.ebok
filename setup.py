@@ -49,6 +49,8 @@ setup(
         'medialog.leadimagesize',
         'collective.mathjax',
         'plone.app.dexterity',
+        'MarkdownSubscript',
+        'MarkdownSubscript',
     ],
     extras_require={
         'test': [
