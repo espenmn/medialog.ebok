@@ -1,5 +1,9 @@
 /* @override http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css */
 
+/* @override http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css */
+
+/* @override http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css */
+
 /* @group markdown */
 
 div.admonition {
@@ -73,10 +77,15 @@ div.admonition.viktig p.admonition-title {
 	
 }
 
+div.admonition.merk:before ,
 div.admonition.viktig:before {
 	content: "!";
 }
 
+div.admonition.merk {
+	padding: 0;
+	margin: 0;
+}
 	
 
 div.admonition.undring {
@@ -138,7 +147,7 @@ div.admonition.note {
 	border-radius: 4px;
 }
 
-div.admonition.merk:before ,
+
 div.admonition.oppgave:before  {
 	content: "!";
 	margin-left: -2em;
@@ -177,6 +186,12 @@ div.admonition.aktivitet {
 	background-color: #d4aebb;	
 }
 
+
+div.admonition.bilde {
+ 
+	background-color: #faf9f8;
+	text-align: center;
+}
  
 
 /* @end */
@@ -286,4 +301,3 @@ td {
     margin: 0;
     padding: 4px 8px;
 }
-
