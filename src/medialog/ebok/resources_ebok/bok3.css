@@ -317,13 +317,12 @@ h5, h6 {
 	 margin-bottom: 2px;
 	 padding-bottom: 0;
 	font-weight: bold;
+	margin-top:  1em;;
 }
 
 table, figure {
   page-break-inside: avoid;
 }
-
-
 
 
 p {
