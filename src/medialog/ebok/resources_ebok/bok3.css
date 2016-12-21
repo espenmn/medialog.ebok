@@ -1,3 +1,9 @@
+/* @override 
+	http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css
+	http://ebok.medialog.no//++theme++ebooktheme/less/barceloneta-compiled.css
+	http://ebok.medialog.no/kompendium/style.css
+*/
+
 import url("fonts.css");
 
 * {
@@ -226,8 +232,21 @@ div.admonition.bilde {
  
 	background-color: #faf9f8;
 	text-align: center;
+
+	margin-right:  1em;;
 }
- 
+
+div.admonition.bilde-right {
+	text-align: center;
+	float:  right;
+	width:  40%;
+	margin-right:  1em;;
+}
+
+
+div.admonition.bilde img{
+	zoom: 70%;
+}
 
 /* @end */
 
@@ -279,22 +298,22 @@ p.chapterDescription {
 
 h2 {
 	font-size: 200%;
-	line-height: 250%;
+	line-height: 200%;
 }
 
 h3 {
 	  font-size: 175%;
-	  line-height: 220%;
+	  line-height: 135%;
 	  margin-bottom: 0.3em;
 	  padding-bottom:0;
 }
 h4 {
-	  font-size: 140%;
+	  font-size: 130%;
 }
 
 h5, h6 {
 	 color: #c64352;
-	 font-size: 120%;
+	 font-size: 113%;
 	 margin-bottom: 2px;
 	 padding-bottom: 0;
 	font-weight: bold;
@@ -308,7 +327,7 @@ table, figure {
 
 
 p {
-	margin-bottom: 4pt;
+	margin: 7pt 0 0;
 }
 
 img {
@@ -343,4 +362,9 @@ td {
 
 ul {
    padding-left: 1.4em;
+}
+
+li {
+	padding: 0;
+	margin:  0;;
 }
