@@ -1,3 +1,5 @@
+/* @override http://xweb14f.plana.dk:8056/ebooks/++plone++production/++unique++2016-11-07T14:19:49.920350/default.css */
+
 import url("fonts.css");
 
 * {
@@ -37,7 +39,7 @@ html {
 body, p {
   orphans:4; 
   widows:2;
-  line-height: 150%;
+  line-height: 160%;
 }
 
 
@@ -251,7 +253,7 @@ hr, .chapter-break {
 
   
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 1.6em;
+	margin-top: 2.4em;
     page-break-after: avoid;
 	color: #006298;
 	font-weight: normal;
@@ -260,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-	  font-size: 250%;
+	  font-size: 300%;
 }
 
 div.chapter_frontpage h1 {
@@ -279,18 +281,18 @@ p.chapterDescription {
 }
 
 h2 {
-	font-size: 200%;
+	font-size: 250%;
 }
 
 h3 {
-	  font-size: 175%;
+	  font-size: 200%;
 }
 h4 {
-	  font-size: 150%;
+	  font-size: 175%;
 }
 
 h5, h6 {
-	 xcolor: #c64352;
+	 color: #c64352;
 	 font-size: 120%;
 	 margin-bottom: 2px;
 	font-weight: bold;
@@ -337,4 +339,8 @@ td {
     border: 1px solid #ccc;
     margin: 0;
     padding: 4px 8px;
+}
+
+ul {
+   padding-left: 1.4em;
 }
