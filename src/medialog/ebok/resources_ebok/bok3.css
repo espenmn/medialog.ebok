@@ -46,7 +46,7 @@ div.admonition {
 	page-break-inside:avoid;
 	font-family: "DeJaVu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	border-radius: 4px;
-	padding: 1em 1.5em 0.5em;
+	padding: 0.8em 1.5em 0.5em;
 	margin: 2em 0 3em;
 	position: relative;
 	
@@ -57,14 +57,14 @@ div.admonition {
 	margin-top:  -0.7em;
 	margin-left:  -1em;
 	margin-right:  -1em;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	page-break-after:avoid;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 150%;
+	font-size: 125%;
 	text-transform: uppercase;
 	border-radius: 4px 4px 0 0 ;
-	padding: 5pt 1em;
+	padding: 3pt 1em;
 	color:  white;
 	}
 
@@ -78,8 +78,6 @@ div.admonition.maal {
 div.admonition.maal  p.admonition-title  {
 	background: #f7c242;
 	display: block;
-
-
 	}
 
  div.admonition p  {
@@ -89,7 +87,8 @@ div.admonition.maal  p.admonition-title  {
 
 div.admonition:before  {
 	position: absolute;
-	font-size:  2.4em;;
+	font-size:  2.4em;
+	line-height: 2em;
 	background-color: #f3b63a;
 	display: block;
 	float: left;
@@ -278,24 +277,27 @@ p.chapterDescription {
 }
 
 h2 {
-	font-size: 250%;
+	font-size: 200%;
+	line-height: 250%;
 }
 
 h3 {
-	  font-size: 200%;
+	  font-size: 175%;
+	  line-height: 220%;
+	  margin-bottom: 0.3em;
+	  padding-bottom:0;
 }
 h4 {
-	  font-size: 175%;
+	  font-size: 140%;
 }
 
 h5, h6 {
 	 color: #c64352;
 	 font-size: 120%;
 	 margin-bottom: 2px;
+	 padding-bottom: 0;
 	font-weight: bold;
 }
-
-
 
 table, figure {
   page-break-inside: avoid;
