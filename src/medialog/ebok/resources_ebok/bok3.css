@@ -29,16 +29,19 @@ html {
   margin-left: 15mm;
   margin-right: 15mm;
     font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    font-size: 75%;
-    line-height: 150%;
+    font-size: 60%;
+
 } 
 
 
-html, body, p {
+body, p {
   orphans:4; 
   widows:2;
+  line-height: 150%;
 }
 
+
+/* @group markdown */
 
 div.admonition {
 	page-break-inside:avoid;
