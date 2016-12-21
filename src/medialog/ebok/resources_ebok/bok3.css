@@ -88,15 +88,15 @@ div.admonition.maal  p.admonition-title  {
 div.admonition:before  {
 	position: absolute;
 	font-size:  2.4em;
-	line-height: 2em;
+	line-height: 1.8em;
 	background-color: #f3b63a;
 	display: block;
 	float: left;
-	width: 1.4em;
+	width: 1.8em;
 	text-align: center;
 	border-radius: 4px;
 	top:  0;
-	left:  -2em;
+	left:  -2.4em;
 }
 
 div.admonition.viktig {
@@ -249,7 +249,8 @@ hr, .chapter-break {
 
   
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 2.4em;
+	margin: 2.4em 0 0;
+	padding: 0;
     page-break-after: avoid;
 	color: #006298;
 	font-weight: normal;
