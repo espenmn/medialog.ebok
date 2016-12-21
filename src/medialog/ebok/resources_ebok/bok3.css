@@ -29,14 +29,15 @@ html {
   margin-left: 15mm;
   margin-right: 15mm;
   font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-  font-size: 0.7ch;
+  font-size: 0.8ch;
+  line-height: 1.1ch;
 } 
 
 
 body, p {
   orphans:4; 
   widows:2;
-  line-height: 160%;
+
 }
 
 
