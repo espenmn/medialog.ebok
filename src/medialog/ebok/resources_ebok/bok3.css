@@ -230,7 +230,7 @@ div.admonition.aktivitet {
 
 div.admonition.bilde {
  
-	background-color: #e4e4df;
+	xborder: 3px solid  #e4e4df;
 	text-align: center;
 
 	margin-right:  1em;;
@@ -246,6 +246,11 @@ div.admonition.bilde-right {
 
 div.admonition.bilde img{
 	zoom: 70%;
+	size: 70%;
+	-webkit-transform: scale(0.7);
+-moz-transform: scale(0.7);
+-o-transform: scale(0.7);
+transform: scale(0.7);
 }
 
 /* @end */
