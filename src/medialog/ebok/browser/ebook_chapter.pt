@@ -1,10 +1,3 @@
- 
-<metal:head fill-slot="javascript_head_slot">
-	<script type="text/javascript" async
-	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-	</script>
-</metal:head>
-
 <div class="chapter_frontpage">
     <h1 class="chapterTitle" tal:content="context/Title" />
     <p class="chapterDescription" tal:content="context/Description" />
