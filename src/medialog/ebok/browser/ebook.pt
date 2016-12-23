@@ -9,13 +9,6 @@
  
  
 <metal:head fill-slot="javascript_head_slot">
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
-	  tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"], ['[latex]','[/latex]']  ],
-      		   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      			processEscapes: true}
-	});
-	</script>
 	<script type="text/javascript" async
 	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 	</script>
@@ -23,11 +16,6 @@
  
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
-        <link rel="stylesheet" href="style.css"/>
-            <a href="#" class="pat-contentloader" data-pat-contentloader="content:.autotoc-nav;target:#contenttarget;">
-            Innholdsfortegnelse</a>
-   			<div id="contenttarget"> </div>
-
             <div id="book"
               class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
               <tal:kapitler tal:repeat="item context/getFolderContents">
