@@ -10,8 +10,8 @@
  
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
-            <div id="book"
-              class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
+            <div id="book">
+              <!-- class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"-->
               <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
@@ -19,7 +19,10 @@
              	</div>
               </tal:kapitler>  
            </div>
-
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+	
 </metal:content-core>
 
 </body>
