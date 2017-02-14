@@ -50,6 +50,15 @@
     />
     
     
+  <browser:page
+        name="ebook_chapter_view"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        template="ebook_chapter_view.pt"
+        permission="zope2.View"
+    />
+    
+    
     <!--pp client templates -->
     <browser:page
       name="asHTML"
