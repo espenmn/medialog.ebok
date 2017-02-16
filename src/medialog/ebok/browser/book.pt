@@ -2,7 +2,7 @@
    <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
-             		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
+             		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
              	</div>
    </tal:kapitler>  
 </div>
