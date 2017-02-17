@@ -344,6 +344,7 @@ table {
     border-spacing: 0;
     page-break-inside: avoid;
     width: 100%;
+    font-size: 100%;
 }
 #content table {
 	margin-bottom:15pt;
