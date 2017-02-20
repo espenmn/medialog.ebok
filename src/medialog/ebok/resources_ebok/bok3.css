@@ -34,7 +34,7 @@ import url("fonts.css");
 
 html {
   margin-left: 15mm;
-  margin-right: 15mm;
+  margin-right: 8mm;
   font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
   font-size: 0.8ch;
 } 
@@ -254,13 +254,19 @@ div.admonition.bilde {
 	margin-right:  1em;;
 }
 
+
+
 div.admonition.bilde-right {
 	text-align: center;
 	float:  right;
 	width:  40%;
 	margin-right:  1em;;
 }
-
+ div.admonition.bilde p {
+	margin: 0;
+	padding: 0;
+	
+}
 
 div.admonition.bilde img{
 	zoom: 70%;
@@ -269,6 +275,8 @@ div.admonition.bilde img{
 -moz-transform: scale(0.7);
 -o-transform: scale(0.7);
 transform: scale(0.7);
+
+
 }
 
 /* @end */
