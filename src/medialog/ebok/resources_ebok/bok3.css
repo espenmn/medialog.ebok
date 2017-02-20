@@ -290,7 +290,7 @@ hr, .chapter-break {
 
 h1.chapterTitle {
 	line-height: 150%;
-	
+
 }
 
 
@@ -318,7 +318,7 @@ div.chapter_frontpage h1 {
 	  font-size: 250%;
 	  padding: 1cm;
 	  border-bottom:  1mm solid #006298;
-	  margin-bottom: 1cm;
+	  margin-bottom: 0.7cm;
 }
 
 p.chapterDescription {
