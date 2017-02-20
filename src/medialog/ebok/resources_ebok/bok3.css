@@ -275,7 +275,7 @@ hr, .chapter-break {
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
 	padding: 0;
-    page-break-after: avoid;
+    page-break-after: avoid !important;
 	color: #006298;
 	font-style: normal;
 	font-weight: 400;
