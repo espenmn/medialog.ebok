@@ -2,6 +2,7 @@
 	http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css
 	http://ebok.medialog.no//++theme++ebooktheme/less/barceloneta-compiled.css
 	http://ebok.medialog.no/kompendium/style.css
+	http://ebok.medialog.no/kompendium/++theme++ebooktheme/markdown.css
 */
 
 import url("fonts.css");
@@ -286,13 +287,22 @@ hr, .chapter-break {
 .chapter_frontpage {
 	text-align: center;
 }
-  
+
+h1.chapterTitle {
+	line-height: 150%;
+	
+}
+
+
 
   
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
 	padding: 0;
     page-break-after: avoid !important;
+    -webkit-page-break-after: avoid;
+    -moz-page-break-after: avoid;
+    break-after: avoid;
 	color: #006298;
 	font-style: normal;
 	font-weight: 400;
@@ -361,7 +371,10 @@ table {
     border-spacing: 0;
     page-break-inside: avoid;
     width: 100%;
-    font-size: 100%;
+    font-size: 90%;
+    margin-top: 1em;
+    margin-bottom:  1em;
+    
 }
 #content table {
 	margin-bottom:15pt;
