@@ -288,13 +288,7 @@ hr, .chapter-break {
 	text-align: center;
 }
 
-h1.chapterTitle {
-	line-height: 200%;
-
-}
-
-
-
+ 
   
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
@@ -316,6 +310,7 @@ h1 {
 div.chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 250%;
+	  line-height: 230%;
 	  padding: 1cm;
 	  border-bottom:  1mm solid #006298;
 	  margin-bottom: 0.7cm;
