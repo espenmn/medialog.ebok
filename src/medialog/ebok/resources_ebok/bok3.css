@@ -112,6 +112,12 @@ div.admonition.viktig {
 	
 div.admonition.viktig p.admonition-title {
 	background-color: #cbab47;
+	top:  0;
+	left:  0;	
+}
+
+div.admonition.viktig p.admonition-title {
+	background-color: #f3b63a;
 	
 	top:  0;
 	left:  0;
@@ -124,7 +130,7 @@ div.admonition.noter {
 	}
 	
 div.admonition.noter p.admonition-title {
-	background-color: #d7e8ef;
+	background-color: #a3b8c0;
 	top:  0;
 	left:  0;
 }
