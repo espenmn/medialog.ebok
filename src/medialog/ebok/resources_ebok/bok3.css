@@ -39,6 +39,11 @@ html {
   font-size: 0.8ch;
 } 
 
+.frontpage {
+	margin: -10mm -18mm -10mm -25mm;
+	width: 210mm;
+	height:  297mm;
+}
 
 body, p {
   orphans:4; 
