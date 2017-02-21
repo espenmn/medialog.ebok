@@ -424,7 +424,7 @@ blockquote {
 	background-color: rgba(0,0,0,0.03);
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-	padding: 5px 20px 10px;
+	padding: 3px 20px 8px;
 	page-break-inside: avoid;
 }
 

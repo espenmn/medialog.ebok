@@ -1,7 +1,6 @@
 template: pdf_template.pt
 
 cover-front:
-
 cover-back:
 
 styles:
