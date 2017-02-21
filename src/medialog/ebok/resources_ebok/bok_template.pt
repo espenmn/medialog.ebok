@@ -8,6 +8,18 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
           <!--link rel="stylesheet" href="http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css"/ -->
 
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"], ['[latex]','[/latex]']  ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>	
 	<script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full"> 
 	</script>
         <link rel="stylesheet" href="bok3.css" /> 
