@@ -43,10 +43,11 @@ html {
 	margin: 0 -8mm 0mm -15mm;
 	height: 205mm;
     width:  160mm;
+    overflow:  hidden;
 }
 .frontimage {
-	height: 220mm;
-    width:  210mm;
+	height: 205mm;
+    width:  160mm;
 }
 
 body, p {
