@@ -14,7 +14,7 @@
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
     </script>	
-	<script type="text/javascript" 
+	<script type="text/javascript" async
 	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
 	</script>
         <link rel="stylesheet" href="bok3.css" /> 
