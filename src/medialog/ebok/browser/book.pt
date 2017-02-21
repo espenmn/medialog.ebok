@@ -1,4 +1,6 @@
-<img class="frontpage" tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">   
+<div class=frontpage">
+    <img class="frontpage" tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">   
+</div>
 <div id="book" class="emn">
    <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
