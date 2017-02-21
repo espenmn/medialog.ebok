@@ -271,8 +271,7 @@ div.admonition.bilde p {
 -moz-transform: scale(0.76);
 -o-transform: scale(0.76);
 transform: scale(0.76);
-   font-size: 120%;
-
+   font-size: 160%;
 }
 
 /* @end */
