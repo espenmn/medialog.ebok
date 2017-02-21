@@ -47,7 +47,7 @@ html {
 }
 .frontimage {
 	height: 205mm;
-    width:  160mm;
+    width:  auto;
 }
 
 body, p {
