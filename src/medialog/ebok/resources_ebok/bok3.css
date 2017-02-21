@@ -44,6 +44,10 @@ html {
 	height: 220mm;
     width:  210mm;
 }
+.frontimage {
+	height: 220mm;
+    width:  210mm;
+}
 
 body, p {
   orphans:4; 
