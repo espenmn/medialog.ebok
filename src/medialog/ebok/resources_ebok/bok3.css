@@ -407,7 +407,10 @@ td {
     margin: 0;
     padding: 4px 8px;
 }
-
+table  th:empty {
+  display:none; ;
+  border: 0 none;
+}
 ul {
    padding-left: 1.4em;
 }
