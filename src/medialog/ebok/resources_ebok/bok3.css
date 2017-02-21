@@ -264,7 +264,7 @@ div.admonition.bilde-right {
 }
  
 
-div.admonition.bilde img{
+div.admonition.bilde p {
 	zoom: 70%;
 	size: 70%;
 	-webkit-transform: scale(0.7);
