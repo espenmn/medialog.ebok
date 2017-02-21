@@ -265,13 +265,13 @@ div.admonition.bilde-right {
  
 
 div.admonition.bilde p {
-	zoom: 70%;
-	size: 70%;
-	-webkit-transform: scale(0.7);
--moz-transform: scale(0.7);
--o-transform: scale(0.7);
-transform: scale(0.7);
-
+	zoom: 76%;
+	size: 76%;
+	-webkit-transform: scale(0.76);
+-moz-transform: scale(0.76);
+-o-transform: scale(0.76);
+transform: scale(0.76);
+   font-size: 120%;
 
 }
 
