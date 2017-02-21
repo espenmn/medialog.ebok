@@ -389,6 +389,7 @@ tr, td {
 #content th  {
 	padding: 7px 15px;
 }
+th,
 td {
     border: 1px solid #ccc;
     margin: 0;
