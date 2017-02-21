@@ -1,8 +1,7 @@
 <html i18n:domain="plone"> 
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-          <!--link rel="stylesheet" href="http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css"/ -->
-	<!-- script type="text/x-mathjax-config">
+	<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
@@ -13,7 +12,7 @@
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
-    </script-->	
+    </script>	
 	<script type="text/javascript" async
 	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
 	</script>
