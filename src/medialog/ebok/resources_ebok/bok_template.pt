@@ -3,8 +3,8 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
           <!--link rel="stylesheet" href="http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css"/ -->
 	<script type="text/x-mathjax-config">MathJax.Hub.Config({
-  jax: ["input/TeX","output/SVG", "output/PreviewHTML"],
-  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js", "fast-preview.js", "AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+  jax: ["input/TeX","input/MathML","input/AsciiMath","output/HTML-CSS","output/NativeMML", "output/PreviewHTML"],
+  extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js", "fast-preview.js", "AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
   TeX: {
     extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
   }
