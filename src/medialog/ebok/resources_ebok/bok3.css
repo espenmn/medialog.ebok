@@ -286,7 +286,11 @@ transform: scale(0.7);
 
 hr, .chapter-break {
     page-break-after:always;
-   }     
+   } 
+   
+  hr {
+	color:  white;
+}    
 	
 .chapter_frontpage {
 	text-align: center;
