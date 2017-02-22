@@ -31,11 +31,11 @@
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 
             </a>
         </div>     
-        <div class="pdfFileContainer">
+        <!--div class="pdfFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
             </a>
-        </div>        
+        </div-->        
 
         <div class="epubFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt' % context.absolute_url()">
