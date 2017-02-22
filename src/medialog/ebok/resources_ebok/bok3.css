@@ -268,7 +268,7 @@ div.admonition.bilde {
 	xborder: 3px solid  #e4e4df;
 	text-align: center;
 
-	margin: 0;
+	margin: 0.2em 0 0.5em 0;
 }
 
 
@@ -282,13 +282,9 @@ div.admonition.bilde-right {
  
 
 div.admonition.bilde p {
-	zoom: 76%;
-	size: 76%;
-	-webkit-transform: scale(0.76);
--moz-transform: scale(0.76);
--o-transform: scale(0.76);
-transform: scale(0.76);
-   font-size: 155%;
+	zoom: 58%;
+	size: 70%;
+	font-size: 160%;
 	font-style: italic;
 }
 
