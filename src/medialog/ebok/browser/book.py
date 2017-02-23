@@ -5,11 +5,21 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 class BookView(BrowserView):
     """ Converter view for Bok.
     """
+    
+    transformations = (
+        'makeImagesLocal',
+        'convertFootnotes',
+        'removeCrapFromHeadings',
+        'fixHierarchies',
+        'addTableOfContents',
+    )
 
     template = ViewPageTemplateFile('book.pt')
 
     def __call__(self, *args, **kw):
         return self.template(self.context)
+        
+    
 
 InitializeClass(BookView)
 
