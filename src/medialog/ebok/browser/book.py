@@ -6,17 +6,19 @@ class BookView(BrowserView):
     """ Converter view for Bok.
     """
     
-    transformations = (
-        'makeImagesLocal',
-        'convertFootnotes',
-        'removeCrapFromHeadings',
-        'fixHierarchies',
-        'addTableOfContents',
-    )
+
 
     template = ViewPageTemplateFile('book.pt')
 
     def __call__(self, *args, **kw):
+        transformations = (
+            'makeImagesLocal',
+            'convertFootnotes',
+            'removeCrapFromHeadings',
+            'fixHierarchies',
+            'addTableOfContents',
+         )
+         
         return self.template(self.context)
         
     
