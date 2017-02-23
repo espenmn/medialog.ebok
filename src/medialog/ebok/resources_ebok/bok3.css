@@ -28,7 +28,15 @@ import url("fonts.css");
     -webkit-padding-after: 2cm;
     -webkit-padding-start: 2cm;
      box-sizing: content-box;
-    
+    content: pageNum;
+}
+
+
+
+
+@page: {
+      content: pageNum;
+     zindex: 99;
 }
 
 
