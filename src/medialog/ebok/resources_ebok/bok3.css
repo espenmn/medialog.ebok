@@ -723,19 +723,13 @@ div.admonition.bilde-right {
 	margin-right:  1em;;
 }
  
-div.admonition.bilde img {
-	xzoom: 58%;
-	xsize: 70%;
-	transform: scale(0.41);
-	xxxize:41%;
+div.admonition.bilde p {
 	 transform:scale(0.41);
     -ms-transform:scale(0.41); /* IE 9 */
     -moz-transform:scale(0.41); /* Firefox */
     -webkit-transform:scale(0.41); /* Safari and Chrome */
     -o-transform:scale(0.41); /* Opera */
-}
-div.admonition.bilde p {
-	font-size: 160%;
+    font-size: 160%;
 	font-style: italic;
 }
 
