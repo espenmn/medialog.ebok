@@ -7,7 +7,9 @@
       i18n:domain="plone">
 <body>
 <div class="frontpage">
-    <div tal:define="obj context/getObject;" tal:replace="structure obj/@@ebook_front | nothing" />
+
+ 
+    <img class="internal-image" tal:attributes="/forsidebilde' % context.absolute_url()">  
 </div>
 <div id="book" class="emn">
    <tal:kapitler tal:repeat="item context/getFolderContents">
