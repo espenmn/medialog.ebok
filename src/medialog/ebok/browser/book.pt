@@ -1,25 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xml:lang="en"
-      lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="plone">
-<body>
-<div class="frontpage">
-
- 
-    <img class="internal-image" tal:attributes="/forsidebilde' % context.absolute_url()">  
-</div>
-<div id="book" class="emn">
-   <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<div class="chapter" tal:condition="python: item.Type=='Kapittel'"
-             		tal:define="obj item/getObject">
-             		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
-             	</div>
-   </tal:kapitler>  
-</div>
-</body>
+<html i18n:domain="plone"> 
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+          <!--link rel="stylesheet" href="http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css"/ -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {inlineMath: [ ['$','$'], ['\\(','\\)'], ['[latex]','[/latex]']  ],
+      		   displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+      			processEscapes: true,
+	            balanceBraces:false,
+	  }
+	});
+	</script>	
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">">
+	</script>
+        <link rel="stylesheet" href="bok3.css" /> 
+	</head>
+    <body>
+        <div id="main-content">
+            <div tal:replace="structure options/body" />
+        </div>
+    </body>
 </html>
-
- 
