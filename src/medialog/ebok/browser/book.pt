@@ -1,5 +1,6 @@
 <div class="frontpage">
-    <img class="frontimage" src="${context/absolute_url}/@@images/image">   
+    <img class="frontimage" src="${context/absolute_url}/@@images/image/full"> 
+    <img tal:attributes="src python:'%s/@@images/image/full' % context.absolute_url()">  
 </div>
 <div id="book" class="emn">
    <tal:kapitler tal:repeat="item context/getFolderContents">
