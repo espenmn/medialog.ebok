@@ -1,9 +1,8 @@
-<div class="chapter_frontpage">
-    <h1 class="chapterTitle" tal:content="context/Title" />
-    <p class="chapterDescription" tal:content="context/Description" />
-</div>
-<div tal:condition="context/text"
-     tal:content="structure context/text/output" />
+<h1 class="chapterTitle chapter" tal:content="context/Title" />
+<p class="chapterDescription" tal:content="context/Description" />
 
-<div class="chapter-break">  </div>
+<div tal:condition="context/text"
+     tal:replace="structure context/text/output" />
+
+<div class="chapter-break" />
 

@@ -10,8 +10,8 @@
  
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
-            <div id="book">
-              <!-- class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;"-->
+            <div id="book" class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
+             <img tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
               <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="kapittel" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">

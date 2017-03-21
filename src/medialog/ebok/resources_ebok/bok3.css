@@ -38,7 +38,7 @@ html {
 }
 
 .frontpage {
-	margin: 0 -8mm 0mm -15mm;
+	margin: -10mm -25mm 0mm -25mm;
 	height: 205mm;
 	width: 160mm;
 	overflow: hidden;
@@ -410,15 +410,6 @@ li {
 ;
 }
 
-blockquote {
-	margin: 10px 0 21px;
-	border-left: 10px solid rgb(197,197,197);
-	background-color: rgb(239,239,239);
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 3px 20px 8px;
-	page-break-inside: avoid;
-}
 
 /* @override 
 	http://ebok.medialog.no/++theme++ebooktheme/++theme++ebooktheme/markdown.css
@@ -731,12 +722,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 300%;
+	font-size: 240%;
 }
 
 div.chapter_frontpage h1 {
 	page-break-before: never;
-	font-size: 250%;
+	font-size: 220%;
 	line-height: 160%;
 	padding: 1cm;
 	border-bottom: 1mm solid #006298;
@@ -750,8 +741,8 @@ p.chapterDescription {
 }
 
 h2 {
-	font-size: 200%;
-	line-height: 200%;
+	font-size: 175%;
+	line-height: 135%;
 }
 
 h3 {
@@ -840,7 +831,7 @@ li {
 
 blockquote {
 	margin: 10px 0 21px;
-	border-left: 10px solid rgb(197,197,197);
+	border-left: 7px solid rgb(197,197,197);
 	background-color: rgb(239,239,239);
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;

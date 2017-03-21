@@ -1,14 +1,12 @@
-<div class="frontpage">
-  
-</div>
-<div id="book" class="emn">
+<img class="cover frontpage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
+ 
+<div class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
    <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<div class="khapter" tal:condition="python: item.Type=='Kapittel'"
+             	<section class="chapter" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
-             	</div>
+             	</section>
    </tal:kapitler>  
 </div>
-
 
  

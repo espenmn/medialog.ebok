@@ -10,7 +10,7 @@
           tal:define="templateId template/getId">
             <div id="chapter"
              tal:condition="context/text"
-             tal:content="structure context/text/output" />
+             tal:replace="structure context/text/output" />
 
 </metal:content-core>
 
