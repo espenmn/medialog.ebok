@@ -1,10 +1,6 @@
-template: pdf_template.pt
-
-cover-front:
+cover-front: 
 cover-back:
 
-styles:
-    - base.css
 
 calibre: default.calibre
 

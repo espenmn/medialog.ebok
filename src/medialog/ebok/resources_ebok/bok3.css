@@ -1,10 +1,8 @@
-
-
 import url("fonts.css");
 
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
  
 @page {
@@ -25,61 +23,66 @@ import url("fonts.css");
      box-sizing: content-box;
 }
 
-
-
+.pagenumber {
+	text-align: center;
+	width: 100%;
+	background: red;
+	display: block;
+}
 
 html {
-  margin-left: 15mm;
-  margin-right: 8mm;
-  font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-  font-size: 0.8ch;
-} 
+	margin-left: 15mm;
+	margin-right: 8mm;
+	font-family: "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+	font-size: 0.8ch;
+}
 
 .frontpage {
 	margin: 0 -8mm 0mm -15mm;
 	height: 205mm;
-    width:  160mm;
-    overflow:  hidden;
+	width: 160mm;
+	overflow: hidden;
 }
+
 .frontimage {
 	height: 205mm;
-    width:  auto;
+	width: auto;
 }
 
 body, p {
-  orphans:4; 
-  widows:2;
-  line-height: 150%;
+	orphans: 4;
+	widows: 2;
+	line-height: 150%;
 }
-
 
 /* @group markdown */
 
 div.admonition {
-	page-break-inside:avoid;
+	page-break-inside: avoid;
 	font-family: "DeJaVu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	border-radius: 4px;
 	padding: 0.7em 1.5em 0.7em;
 	margin: 2em 0 3em;
 	position: relative;
-	
 }
 
- p.admonition-title {
-	background: #f4f4f4;
-	margin-top:  -0.5em;
-	margin-left:  -1em;
-	margin-right:  -1em;
+
+
+p.admonition-title {
+	background: #9e9e9e;
+	margin-top: -0.5em;
+	margin-left: -1em;
+	margin-right: -1em;
 	margin-bottom: 10px;
-	page-break-after:avoid;
+	page-break-after: avoid;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 125%;
 	text-transform: uppercase;
-	border-radius: 4px 4px 0 0 ;
+	border-radius: 4px 4px 0 0;
 	padding: 3pt 1em;
-	color:  white;
-	}
+	color: white;
+}
 
 div.admonition.maal {
 	background-color: #ffe5b4;
@@ -88,19 +91,18 @@ div.admonition.maal {
 	position: relative
 }
 
-div.admonition.maal  p.admonition-title  {
+div.admonition.maal  p.admonition-title {
 	background: #f7c242;
 	display: block;
-	}
-
- div.admonition p  {
-    clear: both;	
-
 }
 
-div.admonition:before  {
+div.admonition p {
+	clear: both;
+}
+
+div.admonition:before {
 	position: absolute;
-	font-size:  2.4em;
+	font-size: 2.4em;
 	line-height: 1.8em;
 	background-color: #f3b63a;
 	display: block;
@@ -108,45 +110,41 @@ div.admonition:before  {
 	width: 1.8em;
 	text-align: center;
 	border-radius: 4px;
-	top:  0;
-	left:  -2.4em;
+	top: 0;
+	left: -2.4em;
 }
 
 div.admonition.viktig {
 	background-color: #face4b;
 	position: relative;
-	}
-	
+}
+
 div.admonition.viktig p.admonition-title {
 	background-color: #cbab47;
-	top:  0;
-	left:  0;	
+	top: 0;
+	left: 0;
 }
 
 div.admonition.viktig p.admonition-title {
 	background-color: #f3b63a;
-	
-	top:  0;
-	left:  0;
-	
+	top: 0;
+	left: 0;
 }
 
 div.admonition.noter {
 	background-color: #d1ecf3;
 	position: relative;
-	}
-	
-div.admonition.noter p.admonition-title {
-	background-color: #a3b8c0;
-	top:  0;
-	left:  0;
 }
 
+div.admonition.noter p.admonition-title {
+	background-color: #a3b8c0;
+	top: 0;
+	left: 0;
+}
 
 div.admonition blockquote {
 	border-left: 10px solid rgba(0,0,0,0.035);
 	background-color: #d9e9f1;
- 
 }
 
 div.admonition.merk:before ,
@@ -158,50 +156,48 @@ div.admonition.merk {
 	padding: 0;
 	margin: 0;
 }
-	
 
 div.admonition.undring {
 	background-color: #e2a0bd;
 	position: relative;
-	}
-	
-div.admonition.undring 	 p.admonition-title   {
+}
+
+div.admonition.undring 	 p.admonition-title {
 	background-color: #9e4d8d;
 	color: white;
 }
 
 div.admonition.undring:before {
-	content:  "?";
+	content: "?";
 	background-color: #9e4d8d;
-	color:  white;
+	color: white;
 }
-
 
 div.admonition.oppsummering {
 	background-color: #add9ce;
 	position: relative;
-	}
-	
-div.admonition.oppsummering  p.admonition-title   {
+}
+
+div.admonition.oppsummering  p.admonition-title {
 	background-color: #37b190;
 	color: white;
 }
 
 div.admonition.oppsummering:before {
-	content:  "Σ";
+	content: "Σ";
 	background-color: #37b190;
-	color:  white;
+	color: white;
 }
 
 div.admonition.formel:before {
-	content:  "f(x)";
+	content: "f(x)";
 	background-color: #96c04f;
 	font-size: 1.6em;
 	font-family: times;
-	width : 2.1em;
+	width: 2.1em;
 	height: 2.1em;
 	line-height: 2.1em;
-	left:  -3em; 
+	left: -3em;
 }
 
 div.admonition.formel p.admonition-title {
@@ -219,25 +215,25 @@ div.admonition.note {
 	border-radius: 4px;
 }
 
-
-div.admonition.oppgave:before  {
+div.admonition.oppgave:before {
 	content: "!";
 	margin-left: -2em;
-	font-size:  2.4em;;
+	font-size: 2.4em;
+	;
 	background-color: #f7c242;
 	line-height: 1.7em;
 	width: 1.4em;
 	float: left;
 	text-align: center;
 	border-radius: 4px;
-	top:  0;
-	color:  white;;
+	top: 0;
+	color: white;
+;
 }
 
 div.admonition.oppgave:before {
-	background-color:#c64352;
-	content:  "?";
-	
+	background-color: #c64352;
+	content: "?";
 }
 
 div.admonition.eksempel {
@@ -247,91 +243,76 @@ div.admonition.eksempel {
 
 div.admonition.eksempel p.admonition-title {
 	background: #88c3df;
-	color:  white;
+	color: white;
 }
-
-
 
 div.admonition.aktivitet {
 	border: 1px solid #c64352;
 	padding: 4mm;
-	background-color: #d4aebb;	
+	background-color: #d4aebb;
 }
 
-
 div.admonition.bilde {
- 
 	xborder: 3px solid  #e4e4df;
 	text-align: center;
-
 	margin: 0.2em 0 0.5em 0;
 }
 
-
-
 div.admonition.bilde-right {
 	text-align: center;
-	float:  right;
-	width:  40%;
-	margin-right:  1em;;
+	float: right;
+	width: 40%;
+	margin-right: 1em;
+;
 }
- 
 
 div.admonition.bilde p {
 	font-size: 160%;
 	font-style: italic;
 }
 
-
-
 /* @end */
 
-
-
-.page-break
-    {
-    page-break-before:always;
-    } 
+.page-break {
+	page-break-before: always;
+}
 
 hr, .chapter-break {
-    page-break-after:always;
-   } 
-   
-  hr {
-	color:  white;
+	page-break-after: always;
+}
+
+hr {
+	color: white;
 	width: 0px;
-}    
-	
+}
+
 .chapter_frontpage {
 	text-align: center;
 }
 
- 
-  
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
 	padding: 0;
-    page-break-after: avoid !important;
-    -webkit-page-break-after: avoid;
-    -moz-page-break-after: avoid;
-    break-after: avoid;
+	page-break-after: avoid !important;
+	-webkit-page-break-after: avoid;
+	-moz-page-break-after: avoid;
+	break-after: avoid;
 	color: #006298;
 	font-style: normal;
 	font-weight: 400;
 }
 
-
 h1 {
-	  font-size: 300%;
+	font-size: 300%;
 }
 
 div.chapter_frontpage h1 {
-	  page-break-before: never;
-	  font-size: 250%;
-	  line-height: 160%;
-	  padding: 1cm;
-	  border-bottom:  1mm solid #006298;
-	  margin-bottom: 0.7cm;
+	page-break-before: never;
+	font-size: 250%;
+	line-height: 160%;
+	padding: 1cm;
+	border-bottom: 1mm solid #006298;
+	margin-bottom: 0.7cm;
 }
 
 p.chapterDescription {
@@ -346,81 +327,87 @@ h2 {
 }
 
 h3 {
-	  font-size: 175%;
-	  line-height: 135%;
-	  margin-bottom: 0.3em;
-	  padding-bottom:0;
-	  	
+	font-size: 175%;
+	line-height: 135%;
+	margin-bottom: 0.3em;
+	padding-bottom: 0;
 }
+
 h4 {
-	  font-size: 130%;
-	  font-weight: 600;
+	font-size: 130%;
+	font-weight: 600;
 }
 
 h5, h6 {
-	 color: #c64352;
-	 font-size: 113%;
-	 margin-bottom: 2px;
-	 padding-bottom: 0;
+	color: #c64352;
+	font-size: 113%;
+	margin-bottom: 2px;
+	padding-bottom: 0;
 	font-weight: bold;
-	margin-top:  1em;;
+	margin-top: 1em;
+;
 }
 
 table, figure {
-  page-break-inside: avoid;
+	page-break-inside: avoid;
 }
-
 
 p {
 	margin: 7pt 0 0;
 }
 
 img {
-  max-width: 100%;
-  height:  auto;;
+	max-width: 100%;
+	height: auto;
+;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    page-break-inside: avoid;
-    width: 100%;
-    font-size: 90%;
-    margin-top: 1em;
-    margin-bottom:  1em;
-    
+	border-collapse: collapse;
+	border-spacing: 0;
+	page-break-inside: avoid;
+	width: 100%;
+	font-size: 90%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
+
 #content table {
-	margin-bottom:15pt;
+	margin-bottom: 15pt;
 	width: auto;
 }
 
 tr, td {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #content td,
-#content th  {
+#content th {
 	padding: 7px 15px;
 }
+
 th,
 td {
-    border: 1px solid #ccc;
-    margin: 0;
-    padding: 4px 8px;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 4px 8px;
 }
+
 table  th:empty {
-  display:none; ;
+	display: none;
+	;
   border: 0 none;
 }
+
 ul {
-   padding-left: 1.4em;
+	padding-left: 1.4em;
 }
 
 li {
 	padding: 0;
-	margin:  0;;
+	margin: 0;
+;
 }
 
 blockquote {
@@ -443,8 +430,8 @@ blockquote {
 import url("fonts.css");
 
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
  
 @page {
@@ -465,62 +452,59 @@ import url("fonts.css");
      box-sizing: content-box;
 }
 
-
-
-
-
 html {
-  margin-left: 15mm;
-  margin-right: 8mm;
-  font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-  font-size: 0.8ch;
-} 
+	margin-left: 15mm;
+	margin-right: 8mm;
+	font-family: "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+	font-size: 0.8ch;
+}
 
 .frontpage {
 	margin: 0 -8mm 0mm -15mm;
 	height: 205mm;
-    width:  160mm;
-    overflow:  hidden;
+	width: 160mm;
+	overflow: hidden;
 }
+
 .frontimage {
 	height: 205mm;
-    width:  auto;
+	width: auto;
 }
 
 body, p {
-  orphans:4; 
-  widows:2;
-  line-height: 150%;
+	orphans: 4;
+	widows: 2;
+	line-height: 150%;
 }
-
 
 /* @group markdown */
 
 div.admonition {
-	page-break-inside:avoid;
+	page-break-inside: avoid;
 	font-family: "DeJaVu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	border-radius: 4px;
 	padding: 0.7em 1.5em 0.7em;
 	margin: 2em 0 3em;
 	position: relative;
-	
 }
 
- p.admonition-title {
-	background: #f4f4f4;
-	margin-top:  -0.5em;
-	margin-left:  -1em;
-	margin-right:  -1em;
+
+
+p.admonition-title {
+	background: #9e9e9e;
+	margin-top: -0.5em;
+	margin-left: -1em;
+	margin-right: -1em;
 	margin-bottom: 10px;
-	page-break-after:avoid;
+	page-break-after: avoid;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 125%;
 	text-transform: uppercase;
-	border-radius: 4px 4px 0 0 ;
+	border-radius: 4px 4px 0 0;
 	padding: 3pt 1em;
-	color:  white;
-	}
+	color: white;
+}
 
 div.admonition.maal {
 	background-color: #ffe5b4;
@@ -529,19 +513,18 @@ div.admonition.maal {
 	position: relative
 }
 
-div.admonition.maal  p.admonition-title  {
+div.admonition.maal  p.admonition-title {
 	background: #f7c242;
 	display: block;
-	}
-
- div.admonition p  {
-    clear: both;	
-
 }
 
-div.admonition:before  {
+div.admonition p {
+	clear: both;
+}
+
+div.admonition:before {
 	position: absolute;
-	font-size:  2.4em;
+	font-size: 2.4em;
 	line-height: 1.8em;
 	background-color: #f3b63a;
 	display: block;
@@ -549,45 +532,41 @@ div.admonition:before  {
 	width: 1.8em;
 	text-align: center;
 	border-radius: 4px;
-	top:  0;
-	left:  -2.4em;
+	top: 0;
+	left: -2.4em;
 }
 
 div.admonition.viktig {
 	background-color: #face4b;
 	position: relative;
-	}
-	
+}
+
 div.admonition.viktig p.admonition-title {
 	background-color: #cbab47;
-	top:  0;
-	left:  0;	
+	top: 0;
+	left: 0;
 }
 
 div.admonition.viktig p.admonition-title {
 	background-color: #f3b63a;
-	
-	top:  0;
-	left:  0;
-	
+	top: 0;
+	left: 0;
 }
 
 div.admonition.noter {
 	background-color: #d1ecf3;
 	position: relative;
-	}
-	
-div.admonition.noter p.admonition-title {
-	background-color: #a3b8c0;
-	top:  0;
-	left:  0;
 }
 
+div.admonition.noter p.admonition-title {
+	background-color: #a3b8c0;
+	top: 0;
+	left: 0;
+}
 
 div.admonition blockquote {
 	border-left: 10px solid rgba(0,0,0,0.035);
 	background-color: #d9e9f1;
- 
 }
 
 div.admonition.merk:before ,
@@ -599,50 +578,48 @@ div.admonition.merk {
 	padding: 0;
 	margin: 0;
 }
-	
 
 div.admonition.undring {
 	background-color: #e2a0bd;
 	position: relative;
-	}
-	
-div.admonition.undring 	 p.admonition-title   {
+}
+
+div.admonition.undring 	 p.admonition-title {
 	background-color: #9e4d8d;
 	color: white;
 }
 
 div.admonition.undring:before {
-	content:  "?";
+	content: "?";
 	background-color: #9e4d8d;
-	color:  white;
+	color: white;
 }
-
 
 div.admonition.oppsummering {
 	background-color: #add9ce;
 	position: relative;
-	}
-	
-div.admonition.oppsummering  p.admonition-title   {
+}
+
+div.admonition.oppsummering  p.admonition-title {
 	background-color: #37b190;
 	color: white;
 }
 
 div.admonition.oppsummering:before {
-	content:  "Σ";
+	content: "Σ";
 	background-color: #37b190;
-	color:  white;
+	color: white;
 }
 
 div.admonition.formel:before {
-	content:  "f(x)";
+	content: "f(x)";
 	background-color: #96c04f;
 	font-size: 1.6em;
 	font-family: times;
-	width : 2.1em;
+	width: 2.1em;
 	height: 2.1em;
 	line-height: 2.1em;
-	left:  -3em; 
+	left: -3em;
 }
 
 div.admonition.formel p.admonition-title {
@@ -660,25 +637,25 @@ div.admonition.note {
 	border-radius: 4px;
 }
 
-
-div.admonition.oppgave:before  {
+div.admonition.oppgave:before {
 	content: "!";
 	margin-left: -2em;
-	font-size:  2.4em;;
+	font-size: 2.4em;
+	;
 	background-color: #f7c242;
 	line-height: 1.7em;
 	width: 1.4em;
 	float: left;
 	text-align: center;
 	border-radius: 4px;
-	top:  0;
-	color:  white;;
+	top: 0;
+	color: white;
+;
 }
 
 div.admonition.oppgave:before {
-	background-color:#c64352;
-	content:  "?";
-	
+	background-color: #c64352;
+	content: "?";
 }
 
 div.admonition.eksempel {
@@ -688,40 +665,34 @@ div.admonition.eksempel {
 
 div.admonition.eksempel p.admonition-title {
 	background: #88c3df;
-	color:  white;
+	color: white;
 }
-
-
 
 div.admonition.aktivitet {
 	border: 1px solid #c64352;
 	padding: 4mm;
-	background-color: #d4aebb;	
+	background-color: #d4aebb;
 }
 
-
 div.admonition.bilde {
- 
 	xborder: 3px solid  #e4e4df;
 	text-align: center;
-    font-style: italic;
+	font-style: italic;
 	font-size: 90%;
 	margin: 0.2em 0 0.5em 0;
 }
 
-
-
 div.admonition.bilde-right {
 	text-align: center;
-	float:  right;
-	width:  40%;
-	margin-right:  1em;;
+	float: right;
+	width: 40%;
+	margin-right: 1em;
+;
 }
- 
- div.admonition.bilde img {
+
+div.admonition.bilde img {
 	zoom: 51%;
 }
- 
 
 div.admonition.bilde p {
 	font-style: italic;
@@ -730,52 +701,46 @@ div.admonition.bilde p {
 
 /* @end */
 
-
-
-.page-break
-    {
-    page-break-before:always;
-    } 
+.page-break {
+	page-break-before: always;
+}
 
 hr, .chapter-break {
-    page-break-after:always;
-   } 
-   
-  hr {
-	color:  white;
+	page-break-after: always;
+}
+
+hr {
+	color: white;
 	width: 0px;
-}    
-	
+}
+
 .chapter_frontpage {
 	text-align: center;
 }
 
- 
-  
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
 	padding: 0;
-    page-break-after: avoid !important;
-    -webkit-page-break-after: avoid;
-    -moz-page-break-after: avoid;
-    break-after: avoid;
+	page-break-after: avoid !important;
+	-webkit-page-break-after: avoid;
+	-moz-page-break-after: avoid;
+	break-after: avoid;
 	color: #006298;
 	font-style: normal;
 	font-weight: 400;
 }
 
-
 h1 {
-	  font-size: 300%;
+	font-size: 300%;
 }
 
 div.chapter_frontpage h1 {
-	  page-break-before: never;
-	  font-size: 250%;
-	  line-height: 160%;
-	  padding: 1cm;
-	  border-bottom:  1mm solid #006298;
-	  margin-bottom: 0.7cm;
+	page-break-before: never;
+	font-size: 250%;
+	line-height: 160%;
+	padding: 1cm;
+	border-bottom: 1mm solid #006298;
+	margin-bottom: 0.7cm;
 }
 
 p.chapterDescription {
@@ -790,81 +755,87 @@ h2 {
 }
 
 h3 {
-	  font-size: 175%;
-	  line-height: 135%;
-	  margin-bottom: 0.3em;
-	  padding-bottom:0;
-	  	
+	font-size: 175%;
+	line-height: 135%;
+	margin-bottom: 0.3em;
+	padding-bottom: 0;
 }
+
 h4 {
-	  font-size: 130%;
-	  font-weight: 600;
+	font-size: 130%;
+	font-weight: 600;
 }
 
 h5, h6 {
-	 color: #c64352;
-	 font-size: 113%;
-	 margin-bottom: 2px;
-	 padding-bottom: 0;
+	color: #c64352;
+	font-size: 113%;
+	margin-bottom: 2px;
+	padding-bottom: 0;
 	font-weight: bold;
-	margin-top:  1em;;
+	margin-top: 1em;
+;
 }
 
 table, figure {
-  page-break-inside: avoid;
+	page-break-inside: avoid;
 }
-
 
 p {
 	margin: 7pt 0 0;
 }
 
 img {
-  max-width: 100%;
-  height:  auto;;
+	max-width: 100%;
+	height: auto;
+;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    page-break-inside: avoid;
-    width: 100%;
-    font-size: 90%;
-    margin-top: 1em;
-    margin-bottom:  1em;
-    
+	border-collapse: collapse;
+	border-spacing: 0;
+	page-break-inside: avoid;
+	width: 100%;
+	font-size: 90%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
+
 #content table {
-	margin-bottom:15pt;
+	margin-bottom: 15pt;
 	width: auto;
 }
 
 tr, td {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #content td,
-#content th  {
+#content th {
 	padding: 7px 15px;
 }
+
 th,
 td {
-    border: 1px solid #ccc;
-    margin: 0;
-    padding: 4px 8px;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 4px 8px;
 }
+
 table  th:empty {
-  display:none; ;
+	display: none;
+	;
   border: 0 none;
 }
+
 ul {
-   padding-left: 1.4em;
+	padding-left: 1.4em;
 }
 
 li {
 	padding: 0;
-	margin:  0;;
+	margin: 0;
+;
 }
 
 blockquote {
@@ -876,6 +847,3 @@ blockquote {
 	padding: 3px 20px 8px;
 	page-break-inside: avoid;
 }
-
-
-
