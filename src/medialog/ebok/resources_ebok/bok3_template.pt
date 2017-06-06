@@ -1,21 +1,21 @@
 <html i18n:domain="plone"> 
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"], ['[latex]','[/latex]']  ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>	
-	<script type="text/javascript" async
-	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">">
+
+  	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+  jax: ["input/MathML","output/SVG"],
+  SVG: {
+    scale: 120
+  },
+	tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      		   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      			processEscapes: true}
+	});
 	</script>
+	<script type="text/javascript" async="" src="MathJax-TeXSVG.js">
+	</script>
+
        <link rel="stylesheet" href="calibre.css" />
         
 	</head>

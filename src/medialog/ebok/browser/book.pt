@@ -1,12 +1,23 @@
-<img class="cover frontpage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
- 
-<div class="pat-autotoc" data-pat-autotoc="scrollDuration:slow;levels:h1,h2,h3,h4,h5;">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone">
+
+<div class="frontpage">
+   <img class="frontimage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
+</div>
+<!--div class="pat-autotoc" data-pat-autotoc="levels:h1,h2,h3,h4,h5;"-->
    <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<section class="chapter" tal:condition="python: item.Type=='Kapittel'"
+             	<section class="chapter pat-autotoc" tal:condition="python: item.Type=='Kapittel'"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
              	</section>
    </tal:kapitler>  
-</div>
+<!--/div-->
 
+ </html>
+ <!--tal:content="structure python:context.text.output_relative_to(view.context)" -->
+ 
  

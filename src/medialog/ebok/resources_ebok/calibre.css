@@ -208,19 +208,14 @@ div.admonition.aktivitet {
 	background-color: #d4aebb;
 }
 
+div.admonition.bilde-right ,
 div.admonition.bilde {
 	text-align: center;
-	margin: 0.2em 0 0.5em 0;
+	margin: 0.2em 0;
+	padding: 0;
 }
 
-div.admonition.bilde-right {
-	text-align: center;
-}
-
-div.admonition.bilde p {
-	font-size: 160%;
-	font-style: italic;
-}
+ 
 
 
 .chapter-break {
@@ -303,7 +298,7 @@ p {
 
 img {
 	width: 100%;
-	height: auto;
+	height: auto ;
 }
 
 table {
@@ -357,14 +352,16 @@ blockquote {
 	page-break-inside: avoid;
 }
 
+div.admonition.bilde-right,
 div.admonition.bilde {
 	text-align: center;
 	font-style: italic;
 	font-size: 90%;
+	padding:  0;
 	margin: 0.2em 0 0.5em 0;
 }
 
-
+div.admonition.bilde-right p,
 div.admonition.bilde p {
 	font-style: italic;
 	font-size: 90%;

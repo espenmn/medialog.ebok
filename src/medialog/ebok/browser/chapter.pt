@@ -6,14 +6,17 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 <body>
-<metal:content-core fill-slot="content-core"
-          tal:define="templateId template/getId">
-            <div id="chapter"
-             tal:condition="context/text"
-             tal:replace="structure context/text/output" />
 
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+  <div id="parent-fieldname-text"
+      tal:condition="context/text"
+      tal:content="structure python:context.text.output_relative_to(view.context)"
+      tal:attributes="class python: toc and 'pat-autotoc' or ''" />
+</metal:content-core>
 </metal:content-core>
 
 </body>
 </html>
-
+        

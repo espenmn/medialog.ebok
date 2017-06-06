@@ -23,10 +23,17 @@ import url("fonts.css");
      box-sizing: content-box;
 }
 
+xsub {
+	background: red;
+}
+
+xsup {
+	background:yellow;
+}
+
 .pagenumber {
 	text-align: center;
 	width: 100%;
-	background: red;
 	display: block;
 }
 
@@ -38,15 +45,18 @@ html {
 }
 
 .frontpage {
-	margin: -10mm -25mm 0mm -25mm;
-	height: 205mm;
-	width: 160mm;
-	overflow: hidden;
+	top:  0;
+	left: 0;
+	right:  0;
+	bottom:  0;
+ 	height:  195mm;
+	width:  140mm;
 }
 
 .frontimage {
-	height: 205mm;
-	width: auto;
+	height: 195mm;
+	width: 158mm;
+ 
 }
 
 body, p {
@@ -425,48 +435,9 @@ import url("fonts.css");
 	-moz-box-sizing: border-box;
 }
  
-@page {
-  size: A4;
-  orphans:4; 
-  widows:2;
-  margin: 5cm;
-  mso-header-margin:5in; 
-   mso-footer-margin:5in; 
-       -webkit-margin-before: 2cm;
-    -webkit-margin-end: 2cm;
-    -webkit-margin-after: 2cm;
-    -webkit-margin-start: 2cm;
-    -webkit-padding-before: 2cm;
-    -webkit-padding-end: 2cm;
-    -webkit-padding-after: 2cm;
-    -webkit-padding-start: 2cm;
-     box-sizing: content-box;
-}
-
-html {
-	margin-left: 15mm;
-	margin-right: 8mm;
-	font-family: "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-	font-size: 0.8ch;
-}
-
-.frontpage {
-	margin: 0 -8mm 0mm -15mm;
-	height: 205mm;
-	width: 160mm;
-	overflow: hidden;
-}
-
-.frontimage {
-	height: 205mm;
-	width: auto;
-}
-
-body, p {
-	orphans: 4;
-	widows: 2;
-	line-height: 150%;
-}
+ 
+ 
+ 
 
 /* @group markdown */
 
@@ -723,6 +694,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 240%;
+	line-height: 160%;
 }
 
 div.chapter_frontpage h1 {

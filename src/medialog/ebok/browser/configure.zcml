@@ -58,6 +58,13 @@
         permission="zope2.View"
     />
     
+  <browser:page
+        name="cache.manifest"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+        class="views.CacheManifest"
+        permission="zope2.View"
+    />
     
     <!--pp client templates -->
     <browser:page

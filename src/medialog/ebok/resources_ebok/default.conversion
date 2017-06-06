@@ -1,3 +1,8 @@
+template: bok3_template.pt
+
+cover-front: cover_image.jpeg
+
+cover-back:
 
 
 calibre: default.calibre
