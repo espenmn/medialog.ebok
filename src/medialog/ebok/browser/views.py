@@ -1,7 +1,10 @@
 from Products.Five.browser import BrowserView
 #from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-class BookView(BrowserView):
+from plone import api
+
+
+class CacheManifest(BrowserView):
     """ Cache Manifest file.
     """
  
@@ -13,23 +16,41 @@ class BookView(BrowserView):
         #return self.template(self.context)
         
         
-    def manifestlist(self, context)
+    def manifestlist(self, context):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        folder_path = '/'.join(context.getPhysicalPath())
+        
+        all_content_brains = catalog(path=folder_path, sort_on='modified', sort_order='descending')
+
+        manifest = str(all_content_brains[0].modified)         
+        for brain in all_content_brains:
+            manifest += "\n"
+            manifest += brain.getURL() 
+            
     	return """CACHE MANIFEST 
-#date 4
 
 
 NETWORK: 
 *
 
 CACHE:
-http://k16.medialog.no/medical-english
-/medical-english
-http://ebok.medialog.no/++plone++production/++unique++2017-02-20T15:00:43.561263/default.css
-http://ebok.medialog.no//++theme++ebooktheme/less/barceloneta-compiled.css
+/++theme++k16theme/markdown.css
+/++theme++k16theme/barceloneta-favicon.ico
+/++theme++k16theme/barceloneta-apple-touch-icon.png
+/++theme++k16theme/barceloneta-apple-touch-icon-144x144-precomposed.png
+/++theme++k16theme/barceloneta-apple-touch-icon-114x114-precomposed.png
+/++theme++k16theme/barceloneta-apple-touch-icon-72x72-precomposed.png
+/++theme++k16theme/barceloneta-apple-touch-icon-57x57-precomposed.png
+/++theme++k16theme/barceloneta-apple-touch-icon-precomposed.png
+          
+http://k16.medialog.no//++theme++k16theme/less/barceloneta-compiled.css 
 http://k16.medialog.no/++theme++ebooktheme/markdown.css
 
+#%(manifest)s
 
 # FALLBACK:
 # / /++theme++k16theme/offline.html
 
-"""
+"""  % {
+        'manifest': manifest,
+        }

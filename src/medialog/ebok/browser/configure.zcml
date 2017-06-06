@@ -60,9 +60,9 @@
     
   <browser:page
         name="cache.manifest"
-        for="plone.dexterity.interfaces.IDexterityContent"
+        for="collective.lineage.interfaces.IChildSite"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
-        class="views.CacheManifest"
+        class=".views.CacheManifest"
         permission="zope2.View"
     />
     

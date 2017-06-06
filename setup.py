@@ -49,6 +49,7 @@ setup(
         'medialog.leadimagesize',
         'collective.mathjax',
         'plone.app.dexterity',
+        'medialog.controlpanel',
     ],
     extras_require={
         'test': [
