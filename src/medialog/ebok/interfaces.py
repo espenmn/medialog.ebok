@@ -51,7 +51,7 @@ class IBokSettings(form.Schema):
 
 
         
-    cols = schema.Text (
+    manifest_base = schema.Text (
     	title=_(u"Manifest base", default=u"Manifest base"),
     )
     
