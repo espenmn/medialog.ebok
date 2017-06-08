@@ -1,4 +1,5 @@
 from Products.Five.browser import BrowserView
+from medialog.ebok.interfaces import IBokSettings
 #from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from plone import api
@@ -18,6 +19,7 @@ class CacheManifest(BrowserView):
         
     def manifestlist(self, context):
         catalog = api.portal.get_tool(name='portal_catalog')
+        manifest_base =api.portal.get_registry_record('manifest_base', interface=IBokSettings)
         folder_path = '/'.join(context.getPhysicalPath())
         
         all_content_brains = catalog(path=folder_path, sort_on='modified', sort_order='descending')
@@ -28,29 +30,12 @@ class CacheManifest(BrowserView):
             manifest += brain.getURL() 
             
     	return """CACHE MANIFEST 
-
-
-NETWORK: 
-*
-
-CACHE:
-/++theme++k16theme/markdown.css
-/++theme++k16theme/barceloneta-favicon.ico
-/++theme++k16theme/barceloneta-apple-touch-icon.png
-/++theme++k16theme/barceloneta-apple-touch-icon-144x144-precomposed.png
-/++theme++k16theme/barceloneta-apple-touch-icon-114x114-precomposed.png
-/++theme++k16theme/barceloneta-apple-touch-icon-72x72-precomposed.png
-/++theme++k16theme/barceloneta-apple-touch-icon-57x57-precomposed.png
-/++theme++k16theme/barceloneta-apple-touch-icon-precomposed.png
-          
-http://k16.medialog.no//++theme++k16theme/less/barceloneta-compiled.css 
-http://k16.medialog.no/++theme++ebooktheme/markdown.css
-
+%(manifest_base)s
 #%(manifest)s
 
-# FALLBACK:
-# / /++theme++k16theme/offline.html
+
 
 """  % {
         'manifest': manifest,
+        'manifest_base': manifest_base,    
         }
