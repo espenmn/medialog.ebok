@@ -10,7 +10,7 @@
           tal:define="templateId template/getId">
     <div id="book_frontpage">
 
-        <img tal:attributes="src python:'%s/@@images/image/%(context.leadsize)s' % context.absolute_url()">
+        <img tal:attributes="src python:'%s/@@images/image/%s' % context.absolute_url(), context.leadsize">
 
         <!--div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
