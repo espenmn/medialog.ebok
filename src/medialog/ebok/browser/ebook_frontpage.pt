@@ -27,10 +27,14 @@
         </div-->
         
         <div class="pdfFileContainer" tal:condition="context/show_pdf_export">
-            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+            <a tal:condtion="context/mathjax" tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+            <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 
+            </a>
+            <a tal:condtion="not: context/mathjax" tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 
             </a>
         </div>     
+              
         <!--div class="pdfFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
