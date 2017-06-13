@@ -42,7 +42,7 @@
             <a tal:condition="context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
             </a>
-            <a tal:condition="not context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
+            <a tal:condition="not: context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
             </a>
         </div>        
