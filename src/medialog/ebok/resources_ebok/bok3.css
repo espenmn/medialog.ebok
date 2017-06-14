@@ -35,8 +35,6 @@ xsup {
 	text-align: center;
 	width: 100%;
 	display: block;
-	color: silver;
-	size:  90%;
 }
 
 html {
@@ -48,17 +46,30 @@ html {
 
 .frontpage {
 	top:  0;
-	left: 0;
+	left: -1em;
 	right:  0;
 	bottom:  0;
- 	height:  195mm;
-	width:  140mm;
+ 	height:  200mm;
+	width:  152mm;
+	position: absolute;
+	background: #006298;
+	padding:  0;
+	
+	
 }
 
 .frontimage {
-	height: 195mm;
-	width: 158mm;
- 
+	height: 200mm;
+	width: 152mm;
+	margin:  0;
+	top:  0;
+	left: -1em;
+	right:  0;
+	bottom:  0;
+ 	position: absolute;
+	background: #006298;
+	padding:  0;
+	
 }
 
 body, p {
