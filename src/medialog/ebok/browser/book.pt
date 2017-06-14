@@ -6,7 +6,7 @@
       i18n:domain="plone">
 
 <div class="frontpage">
-   <img class="frontimage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
+   <img class="frontimage" tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">
 </div>
 <!--div class="pat-autotoc" data-pat-autotoc="levels:h1,h2,h3,h4,h5;"-->
    <tal:kapitler tal:repeat="item context/getFolderContents">
