@@ -5,6 +5,10 @@
       lang="en"
       i18n:domain="plone">
 
+<head>
+<title tal:content="context/Title" />
+</head>
+<body>
 <div class="frontpage">
    <img class="frontimage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
 </div>
@@ -18,6 +22,7 @@
    </tal:kapitler>  
 <!--/div-->
 
+</body>
  </html>
  <!--tal:content="structure python:context.text.output_relative_to(view.context)" -->
  
