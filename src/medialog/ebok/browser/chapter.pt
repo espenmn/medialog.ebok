@@ -5,9 +5,6 @@
       lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
- 
-
- 
 <body>
  
 <metal:content-core fill-slot="content-core">
@@ -33,27 +30,9 @@
            
         });
     </script>
-    
-    <!--script>
-      require([
-        'jquery',
-        '++theme++k16theme/HTML-CSS/jquery.fancybox'  // Note: no `.js`
-      ], function($) {
-          $(".axdmonition.bilde img, .adxmonition.bilde-right img").fancybox({
-		 'showCloseButton': true,
-		 'type' : "image"  
-			});
-        });
-    </script-->
-    
-    
 </metal:content-core>
 </metal:content-core>
 
 </body>
 </html>
-<<<<<<< HEAD
          
-=======
-         
->>>>>>> origin/master
