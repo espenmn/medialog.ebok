@@ -10,7 +10,7 @@
           tal:define="templateId template/getId">
     <div id="book_frontpage">
 
-        <img tal:attributes="src python:'%s/@@images/image/preview' % context.absolute_url()">
+        <img tal:attributes="src python:'%s/@@images/image/%s' %  ( context.absolute_url(), context.leadsize)">
 
         <!--div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
@@ -26,19 +26,23 @@
             </a>
         </div-->
         
-        <div class="pdfFileContainer">
+        <div class="pdfFileContainer" tal:condition="context/show_pdf_export">
             <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 
             </a>
         </div>     
+              
         <!--div class="pdfFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
             </a>
         </div-->        
 
-        <div class="epubFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt' % context.absolute_url()">
+        <div class="epubFileContainer" tal:condition="context/show_epub_export">
+            <a tal:condition="context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt' % context.absolute_url()">
+            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
+            </a>
+            <a tal:condition="not: context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
             </a>
         </div>        
