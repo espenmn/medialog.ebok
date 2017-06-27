@@ -50,6 +50,8 @@ setup(
         'collective.mathjax',
         'plone.app.dexterity',
         'medialog.controlpanel',
+        'medialog.markdown',
+        'collective.lineage'
     ],
     extras_require={
         'test': [

@@ -50,8 +50,6 @@
       factory=".setuphandlers.HiddenProfiles"
       name="medialog.ebok-hiddenprofiles" />
       
-       
-    
   <pp:resourceDirectory
           name="resources_ebok"
           directory="resources_ebok"

@@ -1,8 +1,15 @@
-<h1 class="chapterTitle chapter" tal:content="context/Title" />
-<p class="chapterDescription" tal:content="context/Description" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal">
+      
+<body>
 
-<div tal:condition="context/text"
-     tal:replace="structure context/text/output" />
+	<h1 class="chapterTitle chapter" tal:content="context/Title" />
+	<p class="chapterDescription" tal:content="context/Description" />
 
-<div class="chapter-break" />
-
+	<tal:block repeat="widget view/widgets/values">
+		<tal:widget tal:content="structure widget/render" />
+	</tal:block>
+	 
+	<div class="chapter-break" />
+</body>
+</html>

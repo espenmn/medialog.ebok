@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>1010</version>
+  <version>1020</version>
   <dependencies>
     <dependency>profile-plone.app.dexterity:default</dependency>
     <dependency>profile-medialog.leadimagesize:default</dependency>
     <dependency>profile-medialog.controlpanel:default</dependency>
+    <dependency>profile-medialog.markdown:default</dependency>
   </dependencies>
 </metadata>

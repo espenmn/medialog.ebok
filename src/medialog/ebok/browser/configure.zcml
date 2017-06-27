@@ -47,6 +47,7 @@
 
   <browser:page
         name="chapter_view"
+        class="plone.dexterity.browser.view.DefaultView"
         for="plone.dexterity.interfaces.IDexterityContent"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
         template="chapter.pt"
@@ -55,6 +56,7 @@
 
   <browser:page
         name="ebook_chapter"
+        class="plone.dexterity.browser.view.DefaultView"
         for="plone.dexterity.interfaces.IDexterityContent"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
         template="ebook_chapter.pt"
@@ -64,6 +66,7 @@
     
   <browser:page
         name="ebook_chapter_view"
+        class="plone.dexterity.browser.view.DefaultView"
         for="plone.dexterity.interfaces.IDexterityContent"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
         template="ebook_chapter_view.pt"
@@ -86,11 +89,6 @@
       class=".book.BookView"
       />
 
-    <browser:page
-      name="dropview"
-      for="*"
-      permission="zope2.View"
-      class=".listdropbox.DropView"
-      />
+ 
 
 </configure>
