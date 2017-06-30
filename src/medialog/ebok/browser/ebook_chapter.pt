@@ -1,6 +1,4 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal">
-      
 <body>
 
 	<h1 class="chapterTitle chapter" tal:content="context/Title" />
@@ -12,4 +10,3 @@
 	 
 	<div class="chapter-break" />
 </body>
-</html>
