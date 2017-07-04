@@ -12,8 +12,8 @@
                     tal:define="toc context/table_of_contents|nothing;">
  <div id="parent-fieldname-text"
       tal:attributes="class python: toc and 'pat-autotoc' or ''" >
-    <tal:block repeat="widget view/widgets/values">
-      <tal:widget tal:content="structure widget/render" />
+      <tal:block repeat="widget view/widgets/values">
+       <tal:widget tal:content="structure widget/render" />
  	</tal:block>
 </div>
     <script>

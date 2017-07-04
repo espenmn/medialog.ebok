@@ -13,7 +13,7 @@
             <div id="book">
              <img tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
               <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<div class="kapittel" tal:condition="python: item.Type=='Kapittel'"
+             	<div class="kapittel" tal:condition="python: 'Kapittel' in item.Type"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
              	</div>

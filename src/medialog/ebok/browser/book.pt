@@ -15,7 +15,7 @@
 <div class="page-break" /> 
 <!--div class="pat-autotoc" data-pat-autotoc="levels:h1,h2,h3,h4,h5;"-->
    <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<section class="chapter pat-autotoc" tal:condition="python: item.Type=='Kapittel'"
+             	<section class="chapter pat-autotoc" tal:condition="python: 'Kapittel' in item.Type"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
              	</section>
