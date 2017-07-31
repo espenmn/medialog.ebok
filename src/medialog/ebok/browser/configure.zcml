@@ -89,11 +89,6 @@
       class=".book.BookView"
       />
 
-    <browser:page
-      name="dropview"
-      for="*"
-      permission="zope2.View"
-      class=".listdropbox.DropView"
-      />
+
 
 </configure>
