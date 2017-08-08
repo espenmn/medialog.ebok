@@ -6,16 +6,23 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 <body>
- 
+
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core"
                     tal:define="toc context/table_of_contents|nothing;">
- <div id="parent-fieldname-text"
+
+	<div id="chapter-menu" class="hidden" tal:condition="toc">
+  		<i class="fa fa-list"> </i>
+	</div>
+
+	<div id="parent-fieldname-text"
       tal:attributes="class python: toc and 'pat-autotoc' or ''" >
-      <tal:block repeat="widget view/widgets/values">
-       <tal:widget tal:content="structure widget/render" />
- 	</tal:block>
-</div>
+
+	
+   		<tal:block repeat="widget view/widgets/values">
+       		<tal:widget tal:content="structure widget/render" />
+   		</tal:block>
+    </div>
     <script>
       require([
         'jquery',
@@ -29,9 +36,49 @@
                 }
             }
             });
-           
+            $('.autotoc-nav').attr("id", "TableOfContents");
+            $(document).on("scroll",function(){
+                if ($(this).scrollTop() >= 500) {
+                    $('#TableOfContents').addClass('hidden absolute');
+  				    $('#chapter-menu').removeClass('hidden');
+                }
+  			});
+  			$('#chapter-menu').click(function() {
+  			    $('#TableOfContents').toggleClass('hidden');
+  			});
         });
     </script>
+<style>
+#chapter-menu {
+	padding: 0.45em;
+	text-align: center;
+	font-size: 2.5em;
+	position: fixed;
+	top: 5em;
+	margin-left: -2.5em;
+	background: #e4f0f5;
+	border-radius: 5px;
+	z-index: 9;
+	box-shadow: 3px 3px 6px #999;
+	color: #0083aa;;
+}
+
+#chapter-menu:hover {
+	cursor: pointer;
+}
+
+nav#TableOfContents.absolute {
+	padding: 2em  !important;
+	position: fixed;
+	max-width: 500px;;
+	top: 6em;
+	margin: 1.5em 0;
+	padding-top: 0;
+	border-radius: 5px;
+	z-index: 9;
+	box-shadow: 8px 8px 11px #AAA;
+}
+</style>
 </metal:content-core>
 </metal:content-core>
 
