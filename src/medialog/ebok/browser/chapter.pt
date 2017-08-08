@@ -45,7 +45,7 @@
   				    $('#chapter-menu').removeClass('hidden');
                 }
   			});
-  			$('#chapter-menu, #TableOfContents').click(function() {
+  			$('#chapter-menu, #TableOfContents a').click(function() {
   			    $('#TableOfContents').toggleClass('hidden');
   			});
         });
