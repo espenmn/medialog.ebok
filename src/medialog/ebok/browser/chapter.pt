@@ -37,13 +37,15 @@
             }
             });
             $('.autotoc-nav').attr("id", "TableOfContents");
+            $('.autotoc-nav').addClass('visible');
             $(document).on("scroll",function(){
-                if ($(this).scrollTop() >= 500) {
-                    $('#TableOfContents').addClass('hidden absolute');
+                if ($(this).scrollTop() >= 900) {
+                    $('.autotoc-nav.visible').addClass('hidden absolute');
+                    $('.autotoc-nav.visible').removeClass('visible');
   				    $('#chapter-menu').removeClass('hidden');
                 }
   			});
-  			$('#chapter-menu').click(function() {
+  			$('#chapter-menu, #TableOfContents').click(function() {
   			    $('#TableOfContents').toggleClass('hidden');
   			});
         });
@@ -54,7 +56,7 @@
 	text-align: center;
 	font-size: 2.5em;
 	position: fixed;
-	top: 3em;
+	top: 1em;
 	margin-left: -2.5em;
 	background: #e4f0f5;
 	border-radius: 5px;
@@ -70,9 +72,11 @@
 nav#TableOfContents.absolute {
 	padding: 2em  !important;
 	position: fixed;
-	max-width: 900px;;
-	top: 0.4em;
-	margin: 1.5em 0;
+	max-width: 500px;
+	max-height: 100vh;
+	overflow: scroll;
+	top: 0em;
+	margin: 0;
 	padding-top: 0;
 	border-radius: 5px;
 	z-index: 9;
