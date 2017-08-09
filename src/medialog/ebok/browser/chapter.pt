@@ -37,12 +37,12 @@
             }
             });
             $('.autotoc-nav').attr("id", "TableOfContents");
-            $('.autotoc-nav').addClass('visible');
             $(document).on("scroll",function(){
                 if ($(this).scrollTop() >= 900) {
-                    $('.autotoc-nav.visible').addClass('hidden absolute');
+                    $('#TableOfContents').addClass('hidden absolute');
                     $('.autotoc-nav.visible').removeClass('visible');
   				    $('#chapter-menu').removeClass('hidden');
+  				    $(this).off(event);
                 }
   			});
   			$('#chapter-menu, #TableOfContents a').click(function() {
