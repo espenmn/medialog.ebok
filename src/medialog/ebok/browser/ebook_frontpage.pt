@@ -15,8 +15,15 @@
         <div class="epubFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
             <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-             <img src="ebook_icon.jpg/@@images/image/tile" />Last ned Ebok
+             <img src="ebook_icon.jpg/@@images/image/tile" />
+             </a>
+            <p>
+            <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
+            Last ned Ebok
             </a>
+            <p>
+            <p><b>OBS:</b> 
+            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
         </div>    
         
         <div class="pdfFileContainer"
@@ -45,12 +52,21 @@
             <a tal:condition="not: context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
             </a>
-        </div>        
-             
+            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;;rst</a>
+        </div>     
+         <div id="modal1" style="display: none">
+             <h4>Ebok nedlasting</h4> 
+             <p> </p>
+			<p><strong>Viktig:</strong> <br />Ebok er ikke et standardisert format, så .epub-filer ser forskjellig ut i forskjellige programmer.<br /><br /></p>
+			<p><strong>iPhone/iPad:</strong> <br />IBooks virker med mesteparten, men du bør gå til innstillinger og velge "Scroll" istedenfor "Bla". Det kan også være en fordel å velge mindre skriftstørrelse.</p>
+			<p> </p>
+			<p><strong>Android:</strong> <br />Supreader virker med mesteparten, en kan også her gjøre tilsvarende innstillinger som på iPhone</p>
+			<p> </p>
+			<p> </p>
+         </div>      
     </div>
 
 </metal:content-core>
 
 </body>
 </html>
-
