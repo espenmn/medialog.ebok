@@ -52,7 +52,7 @@
             <a tal:condition="not: context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
             </a>
-            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;;rst</a>
+            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;rst</a>
         </div>     
          <div id="modal1" style="display: none">
              <h4>Ebok nedlasting</h4> 

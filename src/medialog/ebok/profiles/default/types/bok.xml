@@ -11,10 +11,12 @@
  <property name="global_allow">True</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
+  <element value="chapter"/>
+  <element value="Image"/>
+  <element value="Link"/>
   <element value="File"/>
   <element value="Folder"/>
-  <element value="Link"/>
-  <element value="chapter"/>
+  <element value="kapittel_markdown"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">ebook_front</property>
@@ -37,25 +39,38 @@
   <element value="medialog.ebok.behavior.IBokBehavior"/>
  </property>
  <property name="schema"></property>
- <property
-    name="model_source">&lt;model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
-  &lt;schema&gt;
-  &lt;field name="style" type="plone.namedfile.field.NamedBlobFile"&gt;
-  &lt;description/&gt;
-  &lt;required&gt;False&lt;/required&gt;
-  &lt;title&gt;style&lt;/title&gt;
-  &lt;/field&gt;
-  &lt;field name="ebok" type="plone.namedfile.field.NamedBlobFile"&gt;
-  &lt;description/&gt;
-  &lt;required&gt;False&lt;/required&gt;
-  &lt;title&gt;Ebok&lt;/title&gt;
-  &lt;/field&gt;
-  &lt;field name="bok_som_pdf" type="plone.namedfile.field.NamedBlobFile"&gt;
-  &lt;description/&gt;
-  &lt;required&gt;False&lt;/required&gt;
-  &lt;title&gt;Bok som PDF&lt;/title&gt;
-  &lt;/field&gt;
-  &lt;/schema&gt;
+ <property name="model_source">&lt;?xml version='1.0' encoding='utf8'?&gt;
+  &lt;model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
+    &lt;schema&gt;
+      &lt;field name="ebok" type="plone.namedfile.field.NamedBlobFile"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Ebok&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="bok_som_pdf" type="plone.namedfile.field.NamedBlobFile"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Bok som PDF&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="show_pdf_export" type="zope.schema.Bool"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Show PDF export&lt;/title&gt;
+        &lt;form:widget type="z3c.form.browser.radio.RadioFieldWidget"/&gt;
+      &lt;/field&gt;
+      &lt;field name="show_epub_export" type="zope.schema.Bool"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Show Epub Export&lt;/title&gt;
+        &lt;form:widget type="z3c.form.browser.radio.RadioFieldWidget"/&gt;
+      &lt;/field&gt;
+      &lt;field name="mathjax" type="zope.schema.Bool"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Mathjax&lt;/title&gt;
+        &lt;form:widget type="z3c.form.browser.radio.RadioFieldWidget"/&gt;
+      &lt;/field&gt;
+    &lt;/schema&gt;
   &lt;/model&gt;</property>
  <property name="model_file"></property>
  <property name="schema_policy">dexterity</property>
