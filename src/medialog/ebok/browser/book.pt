@@ -9,6 +9,9 @@
 <title tal:content="context/Title" />
 </head>
 <body>
+<div class="frontpage">
+   <img class="frontimage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
+</div>
 <div class="page-break" /> 
 <!--div class="pat-autotoc" data-pat-autotoc="levels:h1,h2,h3,h4,h5;"-->
    <tal:kapitler tal:repeat="item context/getFolderContents">
