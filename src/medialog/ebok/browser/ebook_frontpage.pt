@@ -22,40 +22,40 @@
             Last ned Ebok
             </a>
             <p>
-            <p><b>OBS:</b> 
+            <p><b>OBS:</b>
             <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
-        </div>    
-        
+        </div>
+
         <div class="pdfFileContainer"
              tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
             <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Last ned PDF
             </a>
         </div>
-        
+
         <div class="pdfFileContainer" tal:condition="context/show_pdf_export">
             <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
-            <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF 
+            <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF
             </a>
-        </div>     
-              
+        </div>
+
         <!--div class="pdfFileContainer">
             <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
             <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
             </a>
-        </div-->        
+        </div-->
 
-        <div class="epubFileContainer" tal:condition="context/show_epub_export">
-            <a tal:condition="context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt' % context.absolute_url()">
-            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
+        <div class="epubFileContainer" tal:condition="context/show_epub_export" tal:define="abs_url python:context.absolute_url()">
+            <a tal:condition="context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt&cover=${abs_url}/@@images/image">
+            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
             </a>
-            <a tal:condition="not: context/mathjax"  tal:attributes="href python:'%s/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt' % context.absolute_url()">
-            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok 
+            <a tal:condition="not: context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt&cover=${abs_url}/@@images/image">
+            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
             </a>
             <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;rst</a>
-        </div>     
+        </div>
          <div id="modal1" style="display: none">
-             <h4>Ebok nedlasting</h4> 
+             <h4>Ebok nedlasting</h4>
              <p> </p>
 			<p><strong>Viktig:</strong> <br />Ebok er ikke et standardisert format, så .epub-filer ser forskjellig ut i forskjellige programmer.<br /><br /></p>
 			<p><strong>iPhone/iPad:</strong> <br />IBooks virker med mesteparten, men du bør gå til innstillinger og velge "Scroll" istedenfor "Bla". Det kan også være en fordel å velge mindre skriftstørrelse.</p>
@@ -63,7 +63,7 @@
 			<p><strong>Android:</strong> <br />Supreader virker med mesteparten, en kan også her gjøre tilsvarende innstillinger som på iPhone</p>
 			<p> </p>
 			<p> </p>
-         </div>      
+         </div>
     </div>
 
 </metal:content-core>
