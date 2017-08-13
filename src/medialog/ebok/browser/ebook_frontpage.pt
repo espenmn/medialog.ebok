@@ -46,10 +46,10 @@
         </div-->
 
         <div class="epubFileContainer" tal:condition="context/show_epub_export" tal:define="abs_url python:context.absolute_url()">
-            <a tal:condition="context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt&cover=${abs_url}/@@images/image">
+            <a tal:condition="context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt&cover=${abs_url}/@@images/image&language=${context/language}">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
             </a>
-            <a tal:condition="not: context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt&cover=${abs_url}/@@images/image">
+            <a tal:condition="not: context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt&cover=${abs_url}/@@images/image&language=${context/language}">
             <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
             </a>
             <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;rst</a>
