@@ -24,9 +24,8 @@ class CacheManifest(BrowserView):
     """
 
     def __call__(self, *args, **kw):
-        context = self.context
-        self.folder_path = '/'.join(context.getPhysicalPath())
         self.update()
+        #self.folder_path = '/'.join(self.site_url.getPhysicalPath())
         return self.manifestlist()
 
     def update(self):
@@ -188,9 +187,8 @@ class CacheManifest(BrowserView):
         manifest_on = api.portal.get_registry_record('manifest_on', interface=IBokSettings)
 
         if manifest_on:
-            #folder_path = '/'.join(self.context.getPhysicalPath())
-            all_content_brains = catalog(path=self.folder_path, portal_type=("Kapittel", "Kapittel (markdown)", "Bok", "Image", "Folder", "Page", "Collection"), sort_on='modified', sort_order='descending')
-            #all_content_brains = catalog(sort_on='modified', sort_order='descending')
+            folder_path = '/'.join(self.context.getPhysicalPath())
+            all_content_brains = catalog(path=folder_path, sort_on='modified', sort_order='descending')
             manifest = str(all_content_brains[0].modified)
             for brain in all_content_brains:
                 manifest += "\n" + brain.getURL()
