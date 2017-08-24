@@ -216,11 +216,13 @@ div.admonition.bilde {
 }
 
  
-
-
-.chapter-break {
-	page-break-after: always;
+div.admonition.quoted {
+	margin: 0;
+	padding: 0;
+    border-left: 8px solid silver;
+    padding-left: 15px;
 }
+
 
 hr {
 	color: white;
@@ -244,12 +246,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 300%;
+	font-size: 240%;
+	line-height: 160%;
 }
 
 div.chapter_frontpage h1 {
 	page-break-before: never;
-	font-size: 250%;
+	font-size: 220%;
 	line-height: 160%;
 	padding: 1cm;
 	border-bottom: 1mm solid #006298;
@@ -263,8 +266,8 @@ p.chapterDescription {
 }
 
 h2 {
-	font-size: 200%;
-	line-height: 200%;
+	font-size: 175%;
+	line-height: 135%;
 }
 
 h3 {
@@ -292,6 +295,12 @@ table, figure {
 	page-break-inside: avoid;
 }
 
+figure {
+	padding:  0;
+	margin-left:0;
+	margin-right:0;
+}
+
 p {
 	margin: 7pt 0 0;
 }
@@ -299,6 +308,9 @@ p {
 img {
 	width: 100%;
 	height: auto ;
+	padding:  0;
+	margin-left: 0;
+	margint-right: 0;
 }
 
 table {

@@ -5,7 +5,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 class BookView(BrowserView):
     """ Converter view for Bok.
     """
-    
+
 
 
     template = ViewPageTemplateFile('book.pt')
@@ -16,12 +16,10 @@ class BookView(BrowserView):
             'convertFootnotes',
             'removeCrapFromHeadings',
             'fixHierarchies',
-            'addTableOfContents',
-         )
-         
+        )
+
         return self.template(self.context)
-        
-    
+
+
 
 InitializeClass(BookView)
-

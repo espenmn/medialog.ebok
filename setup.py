@@ -51,7 +51,8 @@ setup(
         'plone.app.dexterity',
         'medialog.controlpanel',
         'medialog.markdown',
-        'collective.lineage'
+        'collective.lineage',
+        'pp.client-plone'
     ],
     extras_require={
         'test': [

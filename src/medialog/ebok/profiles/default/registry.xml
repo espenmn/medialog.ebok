@@ -1,6 +1,7 @@
 <registry>
 <records interface="medialog.ebok.interfaces.IBokSettings">
 <value key="manifest_base"></value>
+<value key="manifest_on"></value>
 </records>
 
 </registry>

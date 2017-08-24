@@ -35,8 +35,6 @@ class IEbok(Interface):
     )
 
 
-
-
 class IBokSettings(form.Schema):
     """Adds settings to medialog.controlpanel
     """
@@ -46,15 +44,17 @@ class IBokSettings(form.Schema):
         label=_(u'Ebok settings'),
         fields=[
              'manifest_base',
+             'manifest_on',
         ],
      )
-
-
         
     manifest_base = schema.Text (
     	title=_(u"Manifest base", default=u"Manifest base"),
     )
     
+    manifest_on = schema.Bool (
+    	title=_(u"Manifest ON", default=u"Manifest on?"),
+    )
     
         
 alsoProvides(IBokSettings, IMedialogControlpanelSettingsProvider)

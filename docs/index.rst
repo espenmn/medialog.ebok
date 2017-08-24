@@ -2,4 +2,4 @@
 medialog.ebok
 ====================
 
-User documentation
+Ebooks for Plone

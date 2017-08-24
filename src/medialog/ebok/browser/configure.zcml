@@ -4,8 +4,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="medialog.ebok">
 
-
-
   <!-- Lineage control Panel -->
   <!-- Control panel -->
   <browser:page
@@ -15,20 +13,13 @@
     layer="medialog.ebok.interfaces.IMedialogEbokLayer"
     permission="cmf.ManagePortal" />
 
-      
-  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <!--include package="z3c.jbot" file="meta.zcml" /-->
-  <!--browser:jbot
-      directory="overrides"
-      layer="medialog.ebok.interfaces.IMedialogEbokLayer"
-      /-->
 
   <!-- Publish static files -->
   <!--browser:resourceDirectory
       name="medialog.ebok"
       directory="static"
       /-->
-      
+
   <browser:page
         name="ebook_view"
         for="plone.dexterity.interfaces.IDexterityContainer"
@@ -62,8 +53,8 @@
         template="ebook_chapter.pt"
         permission="zope2.View"
     />
-    
-    
+
+
   <browser:page
         name="ebook_chapter_view"
         class="plone.dexterity.browser.view.DefaultView"
@@ -72,15 +63,15 @@
         template="ebook_chapter_view.pt"
         permission="zope2.View"
     />
-    
-  <browser:page
+
+    <browser:page
         name="cache.manifest"
-        for="collective.lineage.interfaces.IChildSite"
+        for="*"
         layer="medialog.ebok.interfaces.IMedialogEbokLayer"
         class=".views.CacheManifest"
         permission="zope2.View"
     />
-    
+
     <!--pp client templates -->
     <browser:page
       name="asHTML"

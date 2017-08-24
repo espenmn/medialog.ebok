@@ -22,8 +22,7 @@
             Last ned Ebok
             </a>
             <p>
-            <p><b>OBS:</b>
-            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
+            <p><a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
         </div>
 
         <div class="pdfFileContainer"
@@ -59,10 +58,10 @@
              <p> </p>
 			<p><strong>Viktig:</strong> <br />Ebok er ikke et standardisert format, så .epub-filer ser forskjellig ut i forskjellige programmer.<br /><br /></p>
 			<p><strong>iPhone/iPad:</strong> <br />IBooks virker med mesteparten, men du bør gå til innstillinger og velge "Scroll" istedenfor "Bla". Det kan også være en fordel å velge mindre skriftstørrelse.</p>
-			<p> </p>
+			<p> </p>
 			<p><strong>Android:</strong> <br />Supreader virker med mesteparten, en kan også her gjøre tilsvarende innstillinger som på iPhone</p>
-			<p> </p>
-			<p> </p>
+			<p> </p>
+			<p> </p>
          </div>
     </div>
 

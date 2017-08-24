@@ -6,19 +6,18 @@
 medialog.ebok
 ==============================================================================
 
-Tell me what your product does
+Ebooks for Plone
 
 Features
 --------
 
-- Can be bullet points
+- Export to PDF and epub
 
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+http://marfag.no
 
 
 Documentation
@@ -30,9 +29,7 @@ Full documentation for end users can be found in the "docs" folder, and is also 
 Translations
 ------------
 
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+This product has not been translated into
 
 
 Installation
@@ -54,16 +51,15 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/medialog.ebok/issues
-- Source Code: https://github.com/collective/medialog.ebok
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/espenmn/medialog.ebok/issues
+- Source Code: https://github.com/cespenmn/medialog.ebok
+
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License

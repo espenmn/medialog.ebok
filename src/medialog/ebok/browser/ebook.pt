@@ -6,21 +6,19 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 <body>
- 
- 
+
+
 <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId;">
             <div id="book">
-             <img tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
               <tal:kapitler tal:repeat="item context/getFolderContents">
              	<div class="kapittel" tal:condition="python: 'Kapittel' in item.Type"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter | nothing" />
              	</div>
-              </tal:kapitler>  
+              </tal:kapitler>
            </div>
 </metal:content-core>
 
 </body>
 </html>
-

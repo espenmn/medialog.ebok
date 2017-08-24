@@ -4,26 +4,19 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       i18n:domain="plone">
-
 <head>
-<title tal:content="context/Title" />
+  <title tal:content="context/Title" />
 </head>
 <body>
 <div class="frontpage">
    <img class="frontimage" tal:attributes="src python:'%s/forsidebilde.jpg' % context.absolute_url()">
 </div>
-<div class="page-break" /> 
-<!--div class="pat-autotoc" data-pat-autotoc="levels:h1,h2,h3,h4,h5;"-->
-   <tal:kapitler tal:repeat="item context/getFolderContents">
-             	<section class="chapter pat-autotoc" tal:condition="python: 'Kapittel' in item.Type"
+<div class="page-break" />
+ <tal:kapitler tal:repeat="item context/getFolderContents">
+    <tal:section tal:condition="python: 'Kapittel' in item.Type"
              		tal:define="obj item/getObject">
              		<div tal:define="obj item/getObject;" tal:replace="structure obj/@@ebook_chapter_view | nothing" />
-             	</section>
-   </tal:kapitler>  
-<!--/div-->
-
+    </tal:section>
+  </tal:kapitler>
 </body>
- </html>
- <!--tal:content="structure python:context.text.output_relative_to(view.context)" -->
- 
- 
+</html>
