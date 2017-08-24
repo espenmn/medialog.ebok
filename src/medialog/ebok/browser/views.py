@@ -23,14 +23,10 @@ class CacheManifest(BrowserView):
     in the medialog control panel
     """
 
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-
     def __call__(self, *args, **kw):
-        self.update()
         context = self.context
-        request = self.request
+        self.folder_path = '/'.join(context.getPhysicalPath())
+        self.update()
         return self.manifestlist()
 
     def update(self):
@@ -193,8 +189,8 @@ class CacheManifest(BrowserView):
 
         if manifest_on:
             #folder_path = '/'.join(self.context.getPhysicalPath())
-            #all_content_brains = catalog(path=folder_path, sort_on='modified', sort_order='descending')
-            all_content_brains = catalog(sort_on='modified', sort_order='descending')
+            all_content_brains = catalog(path=self.folder_path, sort_on='modified', sort_order='descending')
+            #all_content_brains = catalog(sort_on='modified', sort_order='descending')
             manifest = str(all_content_brains[0].modified)
             for brain in all_content_brains:
                 manifest += "\n" + brain.getURL()
