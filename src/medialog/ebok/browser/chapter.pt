@@ -18,7 +18,7 @@
 	<div id="parent-fieldname-text"
       tal:attributes="class python: toc and 'pat-autotoc' or ''" >
 
-	
+
    		<tal:block repeat="widget view/widgets/values">
        		<tal:widget tal:content="structure widget/render" />
    		</tal:block>
@@ -39,15 +39,21 @@
             $('.autotoc-nav').attr("id", "TableOfContents");
             $(document).on("scroll",function(){
                 if ($(this).scrollTop() >= 900) {
-                    $('#TableOfContents').addClass('hidden absolute');
                     $('.autotoc-nav.visible').removeClass('visible');
-  				    $('#chapter-menu').removeClass('hidden');
-  				    $(this).off(event);
+                    $('#chapter-menu').removeClass('hidden');
+                    $(this).off(event);
                 }
-  			});
-  			$('#chapter-menu, #TableOfContents a').click(function() {
-  			    $('#TableOfContents').toggleClass('hidden');
-  			});
+              });
+              $('#chapter-menu i').click(function() {
+                  $('#TableOfContents:not(".absolute")').addClass('hidden');
+                  $('#TableOfContents').addClass('absolute');
+                  $('#TableOfContents').toggleClass('hidden');
+              });
+              $('#TableOfContents a').click(function() {
+                if ($("#TableOfContents").hasClass("absolute")) {
+                      $('#TableOfContents').addClass('hidden');
+                }
+              });
         });
     </script>
 <style>
