@@ -44,7 +44,7 @@
                     $(this).off(event);
                 }
               });
-              $('#chapter-menu i').click(function() {
+              $('#chapter-menu').click(function() {
                   $('#TableOfContents:not(".absolute")').addClass('hidden');
                   $('#TableOfContents').addClass('absolute');
                   $('#TableOfContents').toggleClass('hidden');
