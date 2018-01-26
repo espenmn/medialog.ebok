@@ -24,6 +24,10 @@ import url("fonts.css");
     
 }
 
+line {
+	color: red; opacity: 0.65;
+}
+
 
 html {
   margin-left: 15mm;

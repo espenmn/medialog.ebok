@@ -5,6 +5,10 @@ body {
     font-family: "Ubuntu";
 }
 
+line {
+	color: red; opacity: 0.65;
+}
+
 h1 {
     font-size: 2em;
 }

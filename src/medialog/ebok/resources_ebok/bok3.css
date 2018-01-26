@@ -27,6 +27,11 @@ import url("fonts.css");
 	text-align: center;
 }
 
+line {
+	color: red; opacity: 0.65;
+}
+
+
 .frontimage {
 	height: 200mm;
 	width: 152mm;

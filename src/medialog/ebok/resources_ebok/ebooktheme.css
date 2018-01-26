@@ -11,6 +11,10 @@ nav.autotoc-nav {
 	display: none;
 }
 
+line {
+	color: red; opacity: 0.65;
+}
+
 #content-core   nav.autotoc-nav {
 	position: fixed;
 	top:  0;

@@ -1,5 +1,9 @@
 @import url("fonts.css");
 
+line {
+	color: red; opacity: 0.65;
+}
+
 .red {
     background: none repeat scroll 0 0 #FF0000;
     border-radius: 9px 9px 9px 9px;

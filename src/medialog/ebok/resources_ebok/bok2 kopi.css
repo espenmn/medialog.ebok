@@ -24,6 +24,10 @@ page {
   }
 }
 
+line {
+	color: red; opacity: 0.65;
+}
+
 
 html, body {
     width: 210mm;

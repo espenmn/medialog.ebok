@@ -30,6 +30,10 @@ xsub {
 xsup {
 	background:yellow;
 }
+line {
+	color: red; opacity: 0.65;
+}
+
 
 .pagenumber {
 	text-align: center;

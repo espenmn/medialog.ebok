@@ -10,7 +10,11 @@ html {
 	font-family: "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
 	font-size: 0.8ch;
 }
- 
+
+line {
+	color: red; opacity: 0.65;
+}
+
 
 body, p {
 	orphans: 4;
