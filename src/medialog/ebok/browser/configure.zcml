@@ -80,6 +80,11 @@
       class=".book.BookView"
       />
 
-
+   <browser:page
+      name="asHTML"
+      for="medialog.markdown.behavior.IMarkdownBehavior"
+      permission="zope2.View"
+      class=".book.OneChapterView"
+      />
 
 </configure>

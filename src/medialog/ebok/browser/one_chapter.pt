@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone">
+<head>
+  <title tal:content="context/Title" />
+</head>
+<body>
+<div class="frontpage">
+   <img class="frontimage internal" internal-image="true"
+     tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">
+</div>
+<div class="page-break" />
+    <tal:section>
+        <div tal:replace="structure context/@@ebook_chapter_view | nothing" />
+    </tal:section>
+</body>
+</html>
