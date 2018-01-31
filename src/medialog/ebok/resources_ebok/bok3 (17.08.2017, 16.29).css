@@ -23,13 +23,20 @@ import url("fonts.css");
      box-sizing: content-box;
 }
 
-xsub {
-	background: red;
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
 }
 
-xsup {
-	background:yellow;
-}
 line {
 	color: red; opacity: 0.65;
 }
