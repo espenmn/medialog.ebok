@@ -223,6 +223,28 @@ p.chapterDescription {
 	padding: 7px 11px;
 }
 
+
+div.admonition.table {
+	margin: 0;
+	padding: 0;
+}
+
+.admonition.table table thead  {
+	background: whitesmoke; 
+}
+ 
+td.red {background: #ec3323; color: white; border: 0 none}
+td.green {background: #9fce63; border: 0 none;}
+td.yellow {background:  #fffe54; border: 0 none; }
+td.half {width: 50%; }
+ 
+
+
+div.admonition.red {
+	margin: 0;
+	padding: 0;
+	color: red;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
