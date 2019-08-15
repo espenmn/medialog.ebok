@@ -6,65 +6,173 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 <body>
-   <metal:content-core fill-slot="content-core"
+
+
+   <metal:content-core fill-slot="main"
           tal:define="templateId template/getId">
     <div id="book_frontpage">
 
+      <div class="image_div">
         <img tal:attributes="src python:'%s/@@images/image/%s' %  ( context.absolute_url(), context.leadsize)">
+      </div>
 
-        <div class="epubFileContainer"
-             tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
-            <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-             <img src="ebook_icon.jpg/@@images/image/tile" />
-             </a>
-            <p>
-            <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
-            Last ned Ebok
-            </a>
-            <p>
-            <p><a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
+      <div class="booktext_div">
+
+
+
+        <h2>${context/Title}</h2>
+        <p class="documentDescription">${context/Description|None}</p>
+
+
+        <hr/>
+        <p>Forfattere/Bidragsytere: <b><tal:repeat tal:repeat="contr context/contributors">${contr}.</tal:repeat> </b></p>
+        <p tal:condition="context/isbn">ISBN-nummer: <b> ${context/isbn}</b></p>
+
+        <p tal:condition="context/Subject"><span class="subjects white-background" tal:repeat="cate context/Subject"><a class="white-background"  href="/@@search?Subject=${cate}">${cate}</a></span></p>
+
+        <div id="innhold" tal:condition="python:context.listFolderContents()">
+          <h5>Innhold</h5>
+          <p tal:repeat="item python:context.listFolderContents()"><a href="${item/getURL|item/absolute_url}" alt="${item/Title}" tal:condition="not:item/exclude_from_nav|None">${item/Title}</a></p>
         </div>
 
-        <div class="pdfFileContainer"
-             tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
-            <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
-            <img src="./pdf-flat.dms/@@images/image/tile" /> Last ned PDF
-            </a>
-        </div>
 
-        <div class="pdfFileContainer" tal:condition="context/show_pdf_export">
-            <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
-            <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF
-            </a>
-        </div>
 
-        <!--div class="pdfFileContainer">
-            <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
-            <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
-            </a>
-        </div-->
+  </div>
 
-        <div class="epubFileContainer" tal:condition="context/show_epub_export" tal:define="abs_url python:context.absolute_url()">
-            <a tal:condition="context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt&cover=${abs_url}/@@images/image&language=${context/language}">
-            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
-            </a>
-            <a tal:condition="not: context/mathjax"  href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt&cover=${abs_url}/@@images/image&language=${context/language}">
-            <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
-            </a>
-            <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;rst</a>
-        </div>
-         <div id="modal1" style="display: none">
-             <h4>Ebok nedlasting</h4>
-             <p> </p>
-			<p><strong>Viktig:</strong> <br />Ebok er ikke et standardisert format, så .epub-filer ser forskjellig ut i forskjellige programmer.<br /><br /></p>
-			<p><strong>iPhone/iPad:</strong> <br />IBooks virker med mesteparten, men du bør gå til innstillinger og velge "Scroll" istedenfor "Bla". Det kan også være en fordel å velge mindre skriftstørrelse.</p>
-			<p> </p>
-			<p><strong>Android:</strong> <br />Supreader virker med mesteparten, en kan også her gjøre tilsvarende innstillinger som på iPhone</p>
-			<p> </p>
-			<p> </p>
-         </div>
-    </div>
+  </div>
 
+  <div id="whiteboxes">
+  <div class="epubFileContainer white-background"
+       tal:condition="python: getattr(context.aq_explicit, 'ebok', False)">
+      <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
+       <img src="ebook_icon.jpg/@@images/image/tile" />
+       </a>
+      <p>
+      <a tal:attributes="href python:'%s/@@download/ebok' % context.absolute_url()">
+      Last ned Ebok
+      </a>
+      <p>
+      <p><a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;st</a></p>
+  </div>
+
+  <div class="pdfFileContainer white-background"
+       tal:condition="python: getattr(context.aq_explicit, 'bok_som_pdf', False)">
+      <a tal:attributes="href python:'%s/@@download/bok_som_pdf' % context.absolute_url()">
+      <img src="./pdf-flat.dms/@@images/image/tile" /> Last ned PDF
+      </a>
+  </div>
+
+  <div class="pdfFileContainer white-background" tal:condition="context/show_pdf_export|None">
+      <a tal:attributes="href python:'%s/asPDF?converter=phantomjs&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+      <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF
+      </a>
+  </div>
+
+  <!--div class="pdfFileContainer">
+      <a tal:attributes="href python:'%s/asPDF?converter=wkhtmltopdf&resource=resources_ebok&template=bok_template.pt' % context.absolute_url()">
+      <img src="./pdf-flat.dms/@@images/image/tile" /> Generer PDF (test)
+      </a>
+  </div-->
+
+  <div class="epubFileContainer white-background" tal:condition="context/show_epub_export|None" tal:define="abs_url python:context.absolute_url()">
+      <a tal:condition="context/mathjax"  class="generate"
+        href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok3_template.pt&cover=${abs_url}/@@images/image&language=${context/language}">
+      <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
+      </a>
+      <a tal:condition="not: context/mathjax"  class="generate"
+        href="${abs_url}/asPDF?converter=calibre&resource=resources_ebok&template=bok_template4.pt&cover=${abs_url}/@@images/image&language=${context/language}">
+      <img src="./ebook_icon.jpg/@@images/image/tile" /> Generer Ebok
+      </a>
+      <a href="#modal1" class="pat-plone-modal" data-pat-modal="height: 400px" data-plone-pat-modal="height: 400px; title: Ebok nedlasting">Les dette f&oslash;rst</a>
+  </div>
+   <div id="modal1" style="display: none">
+       <h4>Ebok nedlasting</h4>
+       <p> </p>
+    <p><strong>Viktig:</strong> <br />Ebok er ikke et standardisert format, så .epub-filer ser forskjellig ut i forskjellige programmer.<br /><br /></p>
+    <p><strong>iPhone/iPad:</strong> <br />IBooks virker med mesteparten, men du bør gå til innstillinger og velge "Scroll" istedenfor "Bla". Det kan også være en fordel å velge mindre skriftstørrelse.</p>
+    <p> </p>
+    <p><strong>Android:</strong> <br />Supreader virker med mesteparten, en kan også her gjøre tilsvarende innstillinger som på iPhone</p>
+    <p> </p>
+    <p> </p>
+   </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".generate").on("click", function() {
+            $(this).hide();
+        });
+    });
+</script>
+
+<style>
+
+  .outer-wrapper { background: whitesmoke;}
+
+  .white-background {background: white; margin-right: 1em !important;}
+
+  @media only screen and (min-width: 700px) {
+  #book_frontpage   {
+  	display: flex !important;
+    width: 100% !important;
+  }
+  }
+
+  #book_frontpage .image_div img  {
+    padding-top: 2em;
+  	padding-right: 4em;
+  }
+
+
+  #book_frontpage h2 {
+  color: #006298 !important;
+  font-style: normal;
+  font-weight: 400;
+  	text-transform: none;
+  }
+
+  span.subjects { border: 1px solid silver; display: inline-block; margin-right: 0.3em}
+  span.subjects a { margin: 3px 8px !important; display: inline-block; color: #777 ; font-size: 1em !important; }
+
+
+  #innhold a { font-size: 10px !important; }
+
+  #whiteboxes {
+	display: flex;
+
+  margin-top: 2em;
+
+}
+
+#book_frontpage div.image_div {
+    flex-shrink: 0.4;
+}
+  #whiteboxes  a{
+  font-size: 160%;
+  }
+
+  #whiteboxes a.pat-plone-modal {
+  font-size: 130%;
+  float: left;
+  }
+
+  #whiteboxes img { margin-right: 1em; padding-right: 1em;}
+
+#innhold h5 {
+	 color:  #777;
+}
+#innhold a {
+	font-size: 1.16em;
+	border-bottom: 1px solid rgba(17,51,81,0.1451466);
+}
+
+
+div#innhold {
+	margin-top:  2.5em;
+	background: white;
+	padding: 0 1em 1em;
+}
+</style>
 </metal:content-core>
 
 </body>
