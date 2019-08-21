@@ -145,7 +145,7 @@
 }
 
 #book_frontpage div.image_div {
-    flex-shrink: 0.4;
+    flex-shrink: 0.1;
 }
   #whiteboxes  a{
   font-size: 160%;
