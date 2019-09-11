@@ -57,6 +57,7 @@
         });
     </script>
 <style>
+.hidden { display: none}
 #chapter-menu {
 	padding: 0.45em;
 	text-align: center;
