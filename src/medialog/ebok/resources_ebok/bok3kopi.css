@@ -5,12 +5,6 @@ import url("fonts.css");
     -moz-box-sizing: border-box;
 }
  
- 
- iframe {
-	 max-width: 100%;
-}
-
-
 @page {
   size: A4;
   orphans:4; 
@@ -30,72 +24,23 @@ import url("fonts.css");
     
 }
 
-
-a {
-	/* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
-  /* Instead use this non-standard one: */
-  word-break: break-word;
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-
-}
-
-
 .rotate-image {
     transform: rotate(90deg);
 }
 
-.hideinpdf {
-	display: none;
-}
 
-.showinpdf {
-	display:  block;
+line {
+	color: red; opacity: 0.65;
 }
 
 
-.pdf-half {
-	width:  50%;
-}
+html {
+  margin-left: 15mm;
+  margin-right: 8mm;
+  font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
+  font-size: 0.8ch;
+} 
 
-div.admonition.bilde img.pdf-half {
-	zoom: 30%;
-	width: 50% !important;
-}
-
-
-.pdf-third {
-	width:  33%;
-}
-
-.pdf-500 {
-	width:  500px;
-}
-
-
-
-.pdf-550 {
-	width:  550px;
-}
-
-.pdf-600 {
-	width:  600px;
-}
-
-.pdf-nozoom,
-.pdf-nozoom img {
-	zoom: 100%;
-}
 
 sub,
 sup {
@@ -111,75 +56,38 @@ sub {
   bottom: -0.25em;
 }
 
-
-line {
-	color: red; opacity: 0.65;
-}
-
-
-html {
-  margin-left: 15mm;
-  margin-right: 15mm;
-    font-family:  "DejaVu", "DejaVu Sans", "Arial", "Helvetica";
-    font-size: 75%;
-    line-height: 150%;
-} 
-
-
-html, body, p {
+body, p {
   orphans:4; 
   widows:2;
+  line-height: 150%;
 }
 
+
+/* @group markdown */
 
 div.admonition {
 	page-break-inside:avoid;
 	font-family: "DeJaVu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	border-radius: 4px;
-	padding: 1em 1.5em 0.5em;
+	padding: 0.8em 1.5em 0.5em;
 	margin: 2em 0 3em;
 	position: relative;
 	
 }
 
-
-div.admonition.cardtable,
-div.admonition.table {
-	margin: 0;
-	padding: 0;
-}
-
-div.admonition.cardtable table thead,
-.admonition.table table thead  {
-	background: whitesmoke; 
-}
- 
-td.red {background: #ec3323; color: white; border: 0 none}
-td.green {background: #9fce63; border: 0 none;}
-td.yellow {background:  #fffe54; border: 0 none; }
-td.half {width: 50%; }
- 
-
-
-div.admonition.red {
-	margin: 0;
-	padding: 0;
-	color: red;
-}
-
  p.admonition-title {
 	background: #f4f4f4;
-	margin-top:  -0.7em;
+	margin-top:  -0.5em;
 	margin-left:  -1em;
 	margin-right:  -1em;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	page-break-after:avoid;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 150%;
+	font-size: 125%;
 	text-transform: uppercase;
 	border-radius: 4px 4px 0 0 ;
-	padding: 5pt 1em;
+	padding: 3pt 1em;
 	color:  white;
 	}
 
@@ -193,8 +101,6 @@ div.admonition.maal {
 div.admonition.maal  p.admonition-title  {
 	background: #f7c242;
 	display: block;
-
-
 	}
 
  div.admonition p  {
@@ -204,15 +110,16 @@ div.admonition.maal  p.admonition-title  {
 
 div.admonition:before  {
 	position: absolute;
-	font-size:  2.4em;;
+	font-size:  2.4em;
+	line-height: 1.8em;
 	background-color: #f3b63a;
 	display: block;
 	float: left;
-	width: 1.4em;
+	width: 1.8em;
 	text-align: center;
 	border-radius: 4px;
 	top:  0;
-	left:  -2em;
+	left:  -2.4em;
 }
 
 div.admonition.viktig {
@@ -221,11 +128,28 @@ div.admonition.viktig {
 	}
 	
 div.admonition.viktig p.admonition-title {
+	background-color: #cbab47;
+	top:  0;
+	left:  0;	
+}
+
+div.admonition.viktig p.admonition-title {
 	background-color: #f3b63a;
 	
 	top:  0;
 	left:  0;
 	
+}
+
+div.admonition.noter {
+	background-color: #d1ecf3;
+	position: relative;
+	}
+	
+div.admonition.noter p.admonition-title {
+	background-color: #a3b8c0;
+	top:  0;
+	left:  0;
 }
 
 div.admonition.merk:before ,
@@ -340,24 +264,33 @@ div.admonition.aktivitet {
 
 div.admonition.bilde {
  
-	background-color: #faf9f8;
+	xborder: 3px solid  #e4e4df;
 	text-align: center;
-}
- 
- div.admonition.tips {
-	background-color: #c4dc9d;
-	position: relative;
-	clear:  both;
-	}
-	
-div.admonition.tips p.admonition-title {
-	background-color: #83bf5c;
-	top:  0;
-	left:  0;	
+
+	margin-right:  1em;;
 }
 
+
+
+div.admonition.bilde-right {
+	text-align: center;
+	float:  right;
+	width:  40%;
+	margin-right:  1em;;
+}
  
- 
+
+div.admonition.bilde img{
+	zoom: 70%;
+	size: 70%;
+	-webkit-transform: scale(0.7);
+-moz-transform: scale(0.7);
+-o-transform: scale(0.7);
+transform: scale(0.7);
+
+
+}
+
 /* @end */
 
 
@@ -374,29 +307,33 @@ hr, .chapter-break {
 .chapter_frontpage {
 	text-align: center;
 }
-  
 
+ 
   
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 1.6em;
-    page-break-after: avoid;
+	margin: 2.4em 0 0;
+	padding: 0;
+    page-break-after: avoid !important;
+    -webkit-page-break-after: avoid;
+    -moz-page-break-after: avoid;
+    break-after: avoid;
 	color: #006298;
-	font-weight: normal;
 	font-style: normal;
+	font-weight: 400;
 }
 
 
 h1 {
-	  font-size: 250%;
+	  font-size: 300%;
 }
 
 div.chapter_frontpage h1 {
 	  page-break-before: never;
 	  font-size: 250%;
-	  line-height: 34pt;
+	  line-height: 160%;
 	  padding: 1cm;
 	  border-bottom:  1mm solid #006298;
-	  margin-bottom: 1cm;
+	  margin-bottom: 0.7cm;
 }
 
 p.chapterDescription {
@@ -407,33 +344,37 @@ p.chapterDescription {
 
 h2 {
 	font-size: 200%;
+	line-height: 200%;
 }
 
 h3 {
 	  font-size: 175%;
+	  line-height: 135%;
+	  margin-bottom: 0.3em;
+	  padding-bottom:0;
+	  	
 }
 h4 {
-	  font-size: 150%;
+	  font-size: 130%;
+	  font-weight: 600;
 }
 
 h5, h6 {
-	 xcolor: #c64352;
-	 font-size: 120%;
+	 color: #c64352;
+	 font-size: 113%;
 	 margin-bottom: 2px;
+	 padding-bottom: 0;
 	font-weight: bold;
+	margin-top:  1em;;
 }
-
-
 
 table, figure {
   page-break-inside: avoid;
 }
 
 
-
-
 p {
-	margin-bottom: 4pt;
+	margin: 7pt 0 0;
 }
 
 img {
@@ -445,6 +386,10 @@ table {
     border-spacing: 0;
     page-break-inside: avoid;
     width: 100%;
+    font-size: 90%;
+    margin-top: 1em;
+    margin-bottom:  1em;
+    
 }
 #content table {
 	margin-bottom:15pt;
@@ -466,9 +411,23 @@ td {
     padding: 4px 8px;
 }
 
-
-
-.grey-background  {
-    background-color: #ededed;
+ul {
+   padding-left: 1.4em;
 }
 
+li {
+	padding: 0;
+	margin:  0;;
+}
+
+blockquote {
+	padding: 10.5px 21px;
+	margin: 0 0 21px;
+	border-left: 5px solid rgba(0,0,0,0.035);
+	border-left-width: 10px;
+	background-color: rgba(0,0,0,0.03);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 15px 20px;
+	page-break-inside: avoid;
+}

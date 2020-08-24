@@ -6,7 +6,33 @@ import url("fonts.css");
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
- 
+
+
+iframe {
+	 max-width: 100%;
+}
+
+a {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+
 @page {
   size: A4;
   orphans:4; 
@@ -24,6 +50,51 @@ import url("fonts.css");
     -webkit-padding-start: 2cm;
      box-sizing: content-box;
     
+}
+.rotate-image {
+    transform: rotate(90deg);
+}
+
+.hideinpdf {
+	display: none;
+}
+
+.showinpdf {
+	display:  block;
+}
+
+
+.pdf-half {
+	width:  50%;
+}
+
+div.admonition.bilde img.pdf-half {
+	zoom: 30%;
+	width: 50% !important;
+}
+
+
+.pdf-third {
+	width:  33%;
+}
+
+.pdf-500 {
+	width:  500px;
+}
+
+
+.pdf-550 {
+	width:  550px;
+}
+
+.pdf-600 {
+	width:  600px;
+}
+
+
+.pdf-nozoom,
+.pdf-nozoom img {
+	zoom: 100%;
 }
 
 line {
@@ -109,7 +180,29 @@ div.admonition.viktig:before  {
 	top:  0;
 }
 
+div.admonition.cardtable, 
+div.admonition.table {
+	margin: 0;
+	padding: 0;
+}
+
+div.admonition.cardtable table thead,
+.admonition.table table thead  {
+	background: whitesmoke; 
+}
  
+td.red {background: #ec3323; color: white; border: 0 none}
+td.green {background: #9fce63; border: 0 none;}
+td.yellow {background:  #fffe54; border: 0 none; }
+td.half {width: 50%; }
+ 
+
+
+div.admonition.red {
+	margin: 0;
+	padding: 0;
+	color: red;
+}
     
 div.admonition.note {
 	background-color: #f7c242;
@@ -145,6 +238,21 @@ div.admonition.eksempel {
 	margin: 2em 0 3em;
 	border-radius: 6px;
 }
+
+
+ div.admonition.tips {
+	background-color: #c4dc9d;
+	position: relative;
+	clear:  both;
+	}
+	
+div.admonition.tips p.admonition-title {
+	background-color: #83bf5c;
+	top:  0;
+	left:  0;	
+}
+
+ 
 
 /* @end */
 
@@ -211,27 +319,6 @@ h5, h6 {
 }
 
 
-div.admonition.table {
-	margin: 0;
-	padding: 0;
-}
-
-.admonition.table table thead  {
-	background: whitesmoke; 
-}
- 
-td.red {background: #ec3323; color: white; border: 0 none}
-td.green {background: #9fce63; border: 0 none;}
-td.yellow {background:  #fffe54; border: 0 none; }
-td.half {width: 50%; }
- 
-
-
-div.admonition.red {
-	margin: 0;
-	padding: 0;
-	color: red;
-}
 
 table, figure {
   page-break-inside: avoid;
@@ -255,6 +342,7 @@ table {
 #content table {
 	margin-bottom:15pt;
 	width: auto;
+	background:  white;
 }
 
 tr, td {
@@ -270,5 +358,11 @@ td {
     border: 1px solid #ccc;
     margin: 0;
     padding: 4px 8px;
+}
+
+
+
+.grey-background  {
+    background-color: #ededed;
 }
 

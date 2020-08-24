@@ -19,7 +19,6 @@
   src: url(DejaVuSerif.ttf) format("truetype");
 }
 
-
 @font-face {
   font-family: "DejaVu";
   font-weight: bold;
@@ -54,4 +53,12 @@
   font-weight: bold;
   font-style: normal;
   src: url(DejaVuSans-Bold.ttf) format("truetype");
+}
+
+
+@font-face {
+  font-family: "Swanky and Moo Moo";
+  font-weight: normal;
+  font-style: normal;
+  src: url(SwankyandMooMoo-Regular.ttf) format("truetype");
 }

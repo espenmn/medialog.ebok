@@ -36,6 +36,12 @@ body, p {
 	line-height: 150%;
 }
 
+
+
+.grey-background  {
+    background-color: #ededed;
+}
+
 div.admonition {
 	page-break-inside: avoid;
 	font-family: "DeJaVu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;

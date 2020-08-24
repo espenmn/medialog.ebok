@@ -20,6 +20,14 @@
       directory="static"
       /-->
 
+      <browser:page
+            name="ebook_list"
+            for="plone.app.contenttypes.interfaces.ICollection"
+            layer="medialog.ebok.interfaces.IMedialogEbokLayer"
+            template="ebook_list.pt"
+            permission="zope2.View"
+        />
+
   <browser:page
         name="ebook_view"
         for="plone.dexterity.interfaces.IDexterityContainer"
@@ -80,11 +88,13 @@
       class=".book.BookView"
       />
 
-   <browser:page
-      name="asHTML"
-      for="medialog.markdown.behavior.IMarkdownBehavior"
-      permission="zope2.View"
-      class=".book.OneChapterView"
-      />
+
+     <browser:page
+            name="asHTML"
+            for="medialog.markdown.behavior.IMarkdownBehavior"
+            permission="zope2.View"
+            class=".book.OneChapterView"
+            />
+
 
 </configure>

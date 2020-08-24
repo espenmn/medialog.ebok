@@ -29,11 +29,13 @@ class OneChapterView(BrowserView):
     def __call__(self, *args, **kw):
         transformations = (
             'makeImagesLocal',
-            'convertFootnotes',
             'removeCrapFromHeadings',
+            'convertFootnotes',
             'fixHierarchies',
         )
 
         return self.template(self.context)
 
 InitializeClass(OneChapterView)
+
+#'removeCrapFromHeadings',

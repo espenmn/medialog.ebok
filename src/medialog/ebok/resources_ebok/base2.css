@@ -4,6 +4,10 @@ line {
 	color: red; opacity: 0.65;
 }
 
+.rotate-image {
+    transform: rotate(90deg);
+}
+
 sub,
 sup {
   font-size: 75%;

@@ -5,6 +5,32 @@ import url("fonts.css");
 	-moz-box-sizing: border-box;
 }
 
+span.generated-footnote { margin-left: 3px; margin-right:3px;}
+
+iframe {
+	 max-width: 100%;
+}
+
+a {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
 @page {
 	size: A4;
 	orphans:4;
@@ -15,12 +41,94 @@ import url("fonts.css");
 	-webkit-margin-before: 2cm;
 	-webkit-margin-end: 2cm;
 	-webkit-margin-after: 2cm;
-	-webkit-margin-start: 2cm;
-	-webkit-padding-before: 2cm;
+	-webkit-margin-start: 5cm;
+	-webkit-padding-before: 5cm;
 	-webkit-padding-end: 2cm;
 	-webkit-padding-after: 2cm;
-	-webkit-padding-start: 2cm;
+	-webkit-padding-start: 5cm;
 	box-sizing: content-box;
+}
+
+.hideinpdf {
+	display: none;
+}
+
+.showinpdf {
+	display:  block;
+}
+
+
+.pdf-half {
+	width:  50%;
+	display:  inline-block;
+}
+
+
+.pdf-third {
+	width:  33%;
+}
+
+.pdf-100 {
+	width:  100px;
+}
+
+.pdf-150 {
+	width:  150px;
+}
+.pdf-200 {
+	width:  200px;
+}
+
+.pdf-300 {
+	width:  300px;
+}
+
+.pdf-400 {
+	width:  400px;
+}
+
+.pdf-500 {
+	width:  500px;
+}
+
+
+.pdf-550 {
+	width:  550px;
+}
+
+.pdf-600 {
+	width:  600px;
+}
+
+
+.pdf-nozoom,
+.pdf-nozoom img {
+	zoom: 100%;
+}
+
+.pdf-nozoom.full img {
+	width:  100%;
+	height:  auto;
+}
+
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-right::after {
+	content: "";
+	width:  100%;
+	height:  2px;
+	clear:  both;;
+}
+
+.rotate-image {
+    transform: rotate(90deg);
 }
 
 .chapter_frontpage {
@@ -28,18 +136,40 @@ import url("fonts.css");
 }
 
 sub,
-sup {
-  font-size: 75%;
+sup,
+.link_in_header {
+  font-size: 75% !important;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-sup {
+sup,
+.link_in_header {
   top: -0.5em;
 }
 sub {
   bottom: -0.25em;
 }
+
+
+h2 sub,
+h2 sup,
+.link_in_header {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+h2 sup,
+.link_in_header {
+  top: -0.5em;
+}
+
+h2 sub {
+  bottom: -0.25em;
+}
+
 
 line {
 	color: red; opacity: 0.65;
@@ -119,9 +249,7 @@ h1 {
 	line-height: 160%;
 }
 
-h1 {
-	font-size: 300%;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
@@ -133,6 +261,45 @@ h1, h2, h3, h4, h5, h6 {
 	color: #006298;
 	font-style: normal;
 	font-weight: 400;
+}
+
+
+a,a:before, {
+	 color: #345687;  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+a:after, a::after {
+	 color: #345687;
+	 margin-left: 4px;
+	 padding-left: 3px;
+}
+
+a.footnote-ref {
+	color:  black;
+}
+
+a.footnote-backref {
+	 display: none;
+}
+
+h1 {
+	font-size: 300%;
+	margin-top:  0;
+	padding-top: 2em;
 }
 
 h2 {
@@ -181,6 +348,11 @@ hr, .chapter-break {
 	page-break-after: always;
 }
 
+div.footnote hr {
+	page-break-after: avoid;
+	page-break-before: avoid;
+}
+
 html {
 	margin-left: 15mm;
 	margin-right: 8mm;
@@ -210,41 +382,22 @@ p {
 p.chapterDescription {
 	font-size: 115%;
 	line-height: 18pt;
-	margin-bottom: 3cm;
+	margin-bottom: 1.7cm;
 }
 
 #content table {
 	margin-bottom: 15pt;
 	width: auto;
+	background:  white;
 }
+
+.admonition table {background: white}
 
 #content td,
 #content th {
 	padding: 7px 11px;
 }
 
-
-div.admonition.table {
-	margin: 0;
-	padding: 0;
-}
-
-.admonition.table table thead  {
-	background: whitesmoke; 
-}
- 
-td.red {background: #ec3323; color: white; border: 0 none}
-td.green {background: #9fce63; border: 0 none;}
-td.yellow {background:  #fffe54; border: 0 none; }
-td.half {width: 50%; }
- 
-
-
-div.admonition.red {
-	margin: 0;
-	padding: 0;
-	color: red;
-}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -253,6 +406,7 @@ table {
 	font-size: 90%;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	background:  white;
 }
 
 table th:empty {
@@ -280,12 +434,61 @@ tr {
 	padding: 0;
 }
 
-ul {
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  vertical-align: top;
+}
+
+ul, ol {
 	padding-left: 1.4em;
 }
 
 
 /* @group markdown */
+
+
+div.admonition.group, 
+div.admonition.table,
+div.admonition.cardtable,
+div.admonition.table-handwriting,
+div.admonition.table-hanwriting {
+
+	margin: 0;
+	padding: 0;
+}
+
+div.admonition.table-hanwriting table thead,
+div.admonition.table-handwriting table thead,
+.admonition.table table thead,
+.admonition.cardtable table thead   {
+	background: whitesmoke; 
+}
+
+ 
+div.admonition.table-handwriting table,
+div.admonition.table-hanwriting table {
+	color: #0088b5;
+	font-family:  "Comic Sans MS", "Comic Sans", "Comic Sans MT", "Swanky and Moo Moo";
+}
+ 
+ 
+  
+td.red {background: #ec3323; color: white; border: 0 none}
+td.green {background: #9fce63; border: 0 none;}
+td.yellow {background:  #fffe54; border: 0 none; }
+td.blue {background: #038ec3; border: 0 none;
+	color: white;
+}
+
+td.half {width: 50%; }
+ 
+
+
+div.admonition.red {
+	margin: 0;
+	padding: 0;
+	color: red;
+}
 
 div.admonition {
 	page-break-inside: avoid;
@@ -385,11 +588,13 @@ div.admonition.merk {
 	margin: 0;
 }
 
+div.admonition.purplebox, 
 div.admonition.undring {
 	background-color: #e2a0bd;
 	position: relative;
 }
 
+div.admonition.purplebox p.admonition-title, 	
 div.admonition.undring p.admonition-title {
 	background-color: #9e4d8d;
 	color: white;
@@ -428,10 +633,12 @@ div.admonition.formel:before {
 	left: -3em;
 }
 
+div.admonition.greenbox p.admonition-title,
 div.admonition.formel p.admonition-title {
 	background-color: #96c04f;
 }
 
+div.admonition.greenbox,
 div.admonition.formel {
 	background-color: #cbdb6f;
 }
@@ -480,7 +687,6 @@ div.admonition.aktivitet {
 }
 
 div.admonition.bilde {
-	xborder: 3px solid #e4e4df;
 	text-align: center;
 	margin: 0.2em 0 0.5em 0;
 }
@@ -529,6 +735,24 @@ div.admonition.bilde img {
 div.admonition.bilde p {
 	font-style: italic;
 	font-size: 90%;
+}
+
+ div.admonition.tips {
+	background-color: #c4dc9d;
+	position: relative;
+	clear:  both;
+	}
+	
+div.admonition.tips p.admonition-title {
+	background-color: #83bf5c;
+	top:  0;
+	left:  0;	
+}
+
+ 
+
+.grey-background  {
+    background-color: #ededed;
 }
 
 /* @end */

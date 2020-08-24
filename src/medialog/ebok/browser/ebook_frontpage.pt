@@ -32,10 +32,8 @@
 
         <div id="innhold" tal:condition="python:context.listFolderContents()">
           <h5>Innhold</h5>
-          <p tal:repeat="item python:context.listFolderContents()"><a href="${item/getURL|item/absolute_url}" alt="${item/Title}" tal:condition="not:item/exclude_from_nav|None">${item/Title}</a></p>
+          <p tal:repeat="item python:context.listFolderContents()"><a href="${item/getURL|item/absolute_url}" alt="${item/Title}" tal:condition="not:item/exclude_from_nav|None"><i class="fa ${item/iconfield|None}"/>${item/Title}</a></p>
         </div>
-
-
 
   </div>
 
@@ -107,6 +105,11 @@
 
 <style>
 
+  body#visual-portal-wrapper.portaltype-bok #portal-footer .portletWrapper {
+  max-width: 100% !important;
+  margin-right: 0;
+  }
+
   .outer-wrapper { background: whitesmoke;}
 
   .white-background {background: white; margin-right: 1em !important;}
@@ -172,6 +175,36 @@ div#innhold {
 	background: white;
 	padding: 0 1em 1em;
 }
+
+
+#innhold p a i.fa {
+	margin-right:  6px;
+	width: 18px;
+	}
+
+div.booktext_div b {
+     font-weight: normal;
+}
+
+body#visual-portal-wrapper.portaltype-bok #main-container div.col-xs-12.col-sm-9 {
+	width:  100%;
+}
+
+body#visual-portal-wrapper.portaltype-bok div#sidebar  {
+	width:  100% !important;
+}
+
+body#visual-portal-wrapper.portaltype-bok aside#portal-column-two {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+body#visual-portal-wrapper.portaltype-bok .portletWrapper {
+	min-width: 300px;
+	max-width: 400px;
+	margin-right:  2em;;
+}
+
 </style>
 </metal:content-core>
 

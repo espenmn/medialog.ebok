@@ -9,10 +9,9 @@
 </head>
 <body>
 <div class="frontpage">
-   <img class="frontimage internal" internal-image="true"
-     tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">
+   <img class="frontimage internal" internal-image="true"  tal:attributes="src python:'%s/@@images/image' % context.absolute_url()">
 </div>
-<div class="page-break" />
+ <div class="page-break" />
  <tal:kapitler tal:repeat="item context/getFolderContents">
     <tal:section tal:condition="python: 'Kapittel' in item.Type"
              		tal:define="obj item/getObject">

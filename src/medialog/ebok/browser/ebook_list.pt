@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+
+   <metal:content-core fill-slot="content-core"
+          tal:define="templateId template/getId">
+
+ <div class="bookdiv" tal:repeat="book python: context.portal_catalog(portal_type='bok')">
+
+
+<h2><a href="${book/getURL|book/absolute_url}">${book/Title}</a></h2>
+
+<p class="documentDescription">${book/Description|None}</p>
+<p>Forfattere/Bidragsytere: <b><tal:repeat tal:repeat="contr book/contributors">${contr}.</tal:repeat> </b></p>
+
+<div class="flex">
+<div class="imagediv">
+<tal:define tal:define="obj book/getObject;
+                 scale_func obj/@@images;
+                 scaled_image python:scale_func.scale('image', scale='preview')">
+
+<img tal:replace="structure python:scaled_image.tag()"
+     tal:on-error="" />
+
+<p tal:condition="obj/isbn|None">ISBN: <b>${obj/isbn}</b></p>
+
+
+</tal:define>
+</div>
+
+<div class="textdiv">
+
+ <ul tal:define="bok book/getObject" tal:repeat="item bok/getFolderContents">
+    <li tal:condition="not:item/exclude_from_nav|None"><a href="${item/getURL|item/absolute_url}"><i class="fa ${item/iconfield|None}"></i>${item/Title}</a></li>
+  </ul>
+
+</div>
+</div>
+</div>
+<style>
+
+  div.outer-wrapper {
+  	background: whitesmoke;
+  }
+
+  div.bookdiv {
+  	background: white;
+  	padding: 2em;
+  	border-radius: 6px;
+  	margin-bottom: 2em;
+  }
+
+  div.bookdiv a {
+  	text-transform: none;
+  }
+
+  div.bookdiv  h2 {
+  	margin-top: 0;
+  	padding-bottom: 12px;
+  	padding-top: 0;
+  	border-bottom: 1px dotted #DDD;
+  }
+
+
+
+  #content-core div.flex {
+  	display:  flex;
+
+  }
+
+  @media screen and (min-width: 800px) {
+
+  div.imagediv {
+  	width: 220px;
+  }
+  }
+
+  div.imagediv {
+  	margin-right: 2em;
+  }
+
+  div.textdiv {
+      with: auto
+  }
+
+   div.textdiv ul li a i.fa  {
+  	width: 18px;
+    margin-right: 5px;
+  }
+
+  #content-core div.flex div.textdiv ul li {
+  	list-style-image: none;
+  	list-style-type: none;
+  }
+
+  div.textdiv ul {
+  	padding-left: 0;
+  }
+</style>
+
+</metal:content-core>
+
+</body>
+</html>

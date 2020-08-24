@@ -17,6 +17,11 @@ nav.autotoc-nav {
 	display: none;
 }
 
+.rotate-image {
+    transform: rotate(90deg);
+}
+
+
 line {
 	color: red; opacity: 0.65;
 }

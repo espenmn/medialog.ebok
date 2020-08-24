@@ -5,6 +5,10 @@ mport url("fonts.css");
     -moz-box-sizing: border-box;
 }
  
+.rotate-image {
+    transform: rotate(90deg);
+}
+
 
 @page,
 page {

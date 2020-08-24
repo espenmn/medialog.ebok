@@ -189,7 +189,7 @@ class CacheManifest(BrowserView):
         if manifest_on:
             folder_path = '/'.join(self.context.getPhysicalPath())
             #all_content_brains = catalog.searchResults(path=folder_path, portal_type = { "query" : "not": "File" }, sort_on='modified', sort_order='descending')
-            all_content_brains = catalog(path=folder_path, portal_type = ("Image", "kapittel_markdown", "chapter", "bok", "Folder", "Page"), sort_on='modified', sort_order='descending')
+            all_content_brains = catalog(path=folder_path, portal_type = ("Image", "kapittel_markdown", "chapter", "bok", "Image", "Folder", "Page"), sort_on='modified', sort_order='descending')
             manifest = str(all_content_brains[0].modified)
             for brain in all_content_brains:
                 manifest += "\n" + brain.getURL()
