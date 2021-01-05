@@ -35,6 +35,11 @@
           <p tal:repeat="item python:context.listFolderContents()"><a href="${item/getURL|item/absolute_url}" alt="${item/Title}" tal:condition="not:item/exclude_from_nav|None"><i class="fa ${item/iconfield|None}"/>${item/Title}</a></p>
         </div>
 
+
+        <p>&nbsp;</p>
+         <p class="small"><a class="small" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="" src="https://licensebuttons.net/l/by-sa/3.0/88x31.png">Attribution-ShareAlike</a></p>
+
+
   </div>
 
   </div>
@@ -203,6 +208,10 @@ body#visual-portal-wrapper.portaltype-bok .portletWrapper {
 	min-width: 300px;
 	max-width: 400px;
 	margin-right:  2em;;
+}
+
+#book_frontpage div.booktext_div p.small a.small {
+	font-size: 100%
 }
 
 </style>
