@@ -5,7 +5,7 @@ import url("fonts.css");
 	-moz-box-sizing: border-box;
 }
 
-span.generated-footnote { margin-left: 3px; margin-right:3px;}
+xspan.generated-footnote { margin-left: 3px; margin-right:3px;}
 
 iframe {
 	 max-width: 100%;
@@ -57,10 +57,17 @@ a {
 	display:  block;
 }
 
-
+.pdf-50,
 .pdf-half {
 	width:  50%;
 	display:  inline-block;
+}
+
+img.pdf-45,
+.pdf-45,
+div.admonition.bilde img.pdf-45 {
+	width:  59mm !important;
+	zoom: 100% !important;
 }
 
 
@@ -68,36 +75,67 @@ a {
 	width:  33%;
 }
 
+.pdf-32 {
+	width:  32px;
+}
+
 .pdf-100 {
 	width:  100px;
 }
 
-.pdf-150 {
+img.pdf-125,
+.pdf-125 {
+	display:  inline-block;
 	width:  150px;
 }
+
+
+img.pdf-150,
+.pdf-150 {
+	display:  inline-block;
+	width:  150px;
+}
+
+img.pdf-200,
 .pdf-200 {
+	display:  inline-block;
 	width:  200px;
 }
 
+img.pdf-250,
+.pdf-250 {
+	display:  inline-block;
+	width:  250px;
+}
+
+img.pdf-300,
 .pdf-300 {
 	width:  300px;
+	display:  inline-block;
 }
 
+img.pdf-400,
 .pdf-400 {
 	width:  400px;
+	display:  inline-block;
 }
 
+img.pdf-500,
 .pdf-500 {
 	width:  500px;
+	display:  inline-block;
 }
 
-
+img.pdf-550,
 .pdf-550 {
 	width:  550px;
+	display:  inline-block;
 }
 
+img.pdf-600,
 .pdf-600 {
 	width:  600px;
+	display:  inline-block;
 }
 
 
@@ -250,6 +288,9 @@ h1 {
 }
 
 
+.blue {
+	color: #006298;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 2.4em 0 0;
@@ -263,7 +304,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
 
+.generated-footnote {
+	margin-left: 0.6em;
+}
+.generated-footnote a {
+	color: #345687 !important; 
+}
 
+table .generated-footnote a {
+	text-decoration: none !important; 
+}
+table a,
 a,a:before, {
 	 color: #345687;  /* These are technically the same, but use both */
   overflow-wrap: break-word;
@@ -329,14 +380,16 @@ h4 {
 	font-weight: 600;
 }
 
-
 h5, h6 {
-	color: #c64352;
 	font-size: 113%;
 	margin-bottom: 2px;
 	padding-bottom: 0;
 	font-weight: bold;
 	margin-top: 1em;
+}
+
+h5  {
+	color: #c64352;
 }
 
 hr {
@@ -421,6 +474,13 @@ table th:empty {
 
 table, figure {
 	page-break-inside: avoid;
+	display:  inline-block;
+}
+
+
+figure {
+	margin-left:  0;
+	margin-right:  0;
 }
 
 th,td {
@@ -445,6 +505,64 @@ ul, ol {
 
 
 /* @group markdown */
+
+
+div.admonition.turkisboxsmall p.admonition-title,
+div.admonition.turkisbox p.admonition-title {
+	background-color: #0f8aa6;
+}
+
+div.admonition.turkisboxsmall,
+div.admonition.turkisbox {
+background-color: #c3e4e9; 
+}
+
+div.admonition.turkisboxsmall table,
+div.admonition.greenboxsmall table,
+div.admonition.turkisbox table,
+div.admonition.greenbox table {
+	background: none;
+    font-weight: 400;
+	font-size:  100%;
+	border:  0 none
+}
+
+div.admonition.turkisboxsmall table td,
+div.admonition.greenboxsmall table  td {
+	padding: 2px 4px !important;
+	border:  0 none;
+}
+div.admonition.turkisbox table td,
+div.admonition.greenbox table  td {
+	padding: 4px !important;
+	border:  0 none;
+}
+
+div.admonition.turkisboxsmall p.admonition-title,
+div.admonition.turkisbox p.admonition-title {
+	background-color: #0f8aa6;
+}
+
+div.admonition.turkisboxsmall,
+div.admonition.turkisbox {
+background-color: #bce1e3; 
+}
+
+div.admonition.turkisboxsmall table,
+div.admonition.greenboxsmall table,
+div.admonition.turkisbox table,
+div.admonition.greenbox table {
+	background: none;
+    font-weight: 400;
+	font-size:  100%;
+	border:  0 none
+}
+
+div.admonition.turkisbox table td,
+div.admonition.greenbox table  td {
+	padding: 4px !important;
+	border:  0 none;
+}
 
 
 div.admonition.group, 
@@ -633,11 +751,13 @@ div.admonition.formel:before {
 	left: -3em;
 }
 
+div.admonition.greenboxsmall p.admonition-title,
 div.admonition.greenbox p.admonition-title,
 div.admonition.formel p.admonition-title {
 	background-color: #96c04f;
 }
 
+div.admonition.greenboxsmall,
 div.admonition.greenbox,
 div.admonition.formel {
 	background-color: #cbdb6f;
@@ -662,7 +782,6 @@ div.admonition.oppgave:before {
 	border-radius: 4px;
 	top: 0;
 	color: white;
-;
 }
 
 div.admonition.oppgave:before {
@@ -689,6 +808,8 @@ div.admonition.aktivitet {
 div.admonition.bilde {
 	text-align: center;
 	margin: 0.2em 0 0.5em 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 div.admonition.bilde-right {
@@ -703,6 +824,7 @@ div.admonition.bilde p {
 	font-size: 160%;
 	font-style: italic;
 }
+
 
 div.admonition {
 	page-break-inside: avoid;
